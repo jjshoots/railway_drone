@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="car">
+
+    <xacro:include filename="materials.xacro" />
+
+    <!-- #region XACRO_MACROS -->
+
+    <!-- #region CONSTANTS -->
+    <xacro:property name="boxheight" value="0.1" />
+    <xacro:property name="carlength" value="0.75" />
+    <xacro:property name="carmass" value="0.05" />
+    <xacro:property name="carwidth" value="0.05" />
+    <xacro:property name="pitchlimit" value="0" />
+    <xacro:property name="cardamping" value="0.0" />
+    <xacro:property name="carfriction" value="0.01" />
+    <xacro:property name="camerasize" value="0.10" />
+    <!-- #endregion -->
+
+    <!-- #region MAKE_BOX -->
+    <xacro:macro name="make_box" params="length width height mass material originxyz originrpy">
+        <visual>
+            <origin rpy="${originrpy}" xyz="${originxyz}"/>
+            <geometry>
+                <box size="${length} ${width} ${height}"/>
+            </geometry>
+            <material name="${material}"/>
+        </visual>
+        <collision>
+            <origin rpy="${originrpy}" xyz="${originxyz}"/>
+            <geometry>
+                <box size="${length} ${width} ${height}"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="${mass}"/>
+            <inertia
+                ixx="${1/12 * mass * (height*height + length*length)}"
+                iyy="${1/12 * mass * (width*width + length*length)}"
+                izz="${1/12 * mass * (width*width + height*height)}"
+                ixy="0"
+                ixz="0"
+                iyz="0"
+            />
+        </inertial>
+    </xacro:macro>
+    <!-- #endregion -->
+
+    <!-- #region MAKE_CYLINDER -->
+    <xacro:macro name="make_cylinder" params="length radius mass material originxyz originrpy">
+        <visual>
+            <origin rpy="${originrpy}" xyz="${originxyz}"/>
+            <geometry>
+                <cylinder length="${length}" radius="${radius}"/>
+            </geometry>
+            <material name="${material}"/>
+        </visual>
+        <collision>
+            <origin xyz="${originxyz}" rpy="${originrpy}"/>
+            <geometry>
+                <cylinder length="${length}" radius="${length}"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="${mass}"/>
+            <inertia
+                ixx="${1/12 * mass * (3*radius*radius + length*length)}"
+                iyy="${1/12 * mass * (3*radius*radius + length*length)}"
+                izz="${1/2 * mass * radius*radius}"
+                ixy="0"
+                ixz="0"
+                iyz="0"
+            />
+        </inertial>
+    </xacro:macro>
+    <!-- #endregion -->
+
+    <!-- #endregion -->
+
+    <!-- ROBOT BEGINS HERE -->
+    <!-- ROBOT BEGINS HERE -->
+    <!-- ROBOT BEGINS HERE -->
+
+    <!-- #region BASE -->
+    <link name="base_link">
+        <xacro:make_box length="0.5" width="0.5" height="${boxheight}" mass="${carmass}" material="red" originxyz="0 0 0" originrpy="0 0 0"/>
+    </link>
+    <!-- #endregion -->
+
+    <!-- #region WHEELS -->
+    <!-- #region FRONT_LEFT_WHEEL -->
+    <link name="front_left_wheel">
+        <xacro:make_cylinder length="0.1" radius="0.1" mass="${carmass}" material="orange" originxyz="0.051 0 0" originrpy="0 1.570796327 0"/>
+    </link>
+
+    <joint name="base_to_front_left_wheel" type="fixed">
+        <parent link="base_link"/>
+        <child link="front_left_wheel"/>
+        <!-- joint of child is xyz away from parent -->
+        <origin xyz="0.25 0.25 ${-boxheight/2}"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <!-- #endregion -->
+
+    <!-- #region FRONT_RIGHT_WHEEL -->
+    <link name="front_right_wheel">
+        <xacro:make_cylinder length="0.1" radius="0.1" mass="${carmass}" material="orange" originxyz="0.051 0 0" originrpy="0 -1.570796327 0"/>
+    </link>
+
+    <joint name="base_to_front_right_wheel" type="fixed">
+        <parent link="base_link"/>
+        <child link="front_right_wheel"/>
+        <!-- joint of child is xyz away from parent -->
+        <origin xyz="0.25 -0.25 ${-boxheight/2}"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <!-- #endregion -->
+
+    <!-- #region BACK_LEFT_WHEEL -->
+    <link name="back_left_wheel">
+        <xacro:make_cylinder length="0.1" radius="0.1" mass="${carmass}" material="orange" originxyz="-0.051 0 0" originrpy="0 1.570796327 0"/>
+    </link>
+
+    <joint name="base_to_back_left_wheel" type="fixed">
+        <parent link="base_link"/>
+        <child link="back_left_wheel"/>
+        <!-- joint of child is xyz away from parent -->
+        <origin xyz="-0.25 0.25 ${-boxheight/2}"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <!-- #endregion -->
+
+    <!-- #region BACK_RIGHT_WHEEL -->
+    <link name="back_right_wheel">
+        <xacro:make_cylinder length="0.1" radius="0.1" mass="${carmass}" material="orange" originxyz="-0.051 0 0" originrpy="0 1.570796327 0"/>
+    </link>
+
+    <joint name="base_to_back_right_wheel" type="fixed">
+        <parent link="base_link"/>
+        <child link="back_right_wheel"/>
+        <!-- joint of child is xyz away from parent -->
+        <origin xyz="-0.25 -0.25 ${-boxheight/2}"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <!-- #endregion -->
+    <!-- #endregion -->
+
+    <!-- #region CAMERA -->
+    <link name="camera">
+        <xacro:make_box length="${camerasize}" width="${camerasize}" height="${camerasize}" mass="0" material="white" originxyz="0 0 ${camerasize/2}" originrpy="0 0 0"/>
+    </link>
+
+    <joint name="base_to_camera" type="fixed">
+        <axis xyz="0 1 0" />
+        <origin xyz="0 ${0.5/2} ${boxheight/2}" rpy="0 0 1.57"/>
+        <parent link="base_link"/>
+        <child link="camera"/>
+    </joint>
+    <!-- #endregion -->
+
+</robot>
