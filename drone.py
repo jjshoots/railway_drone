@@ -86,7 +86,7 @@ class Drone():
         self.rpp = (camera_FOV / 180 * math.pi) / self.frame_size
         self.centre_idx = (self.frame_size+1) / 2
 
-        xspace = np.arange(self.frame_size[1], 0, -1)
+        xspace = np.arange(self.frame_size[0], 0, -1)
         yspace = np.arange(self.frame_size[1], 0, -1)
         self.a_array = np.stack(np.meshgrid(xspace, yspace), axis=-1) - self.centre_idx
         self.a_array *= self.rpp
