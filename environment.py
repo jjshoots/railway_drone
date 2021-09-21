@@ -1,59 +1,52 @@
-import os
-import glob
-import random
 import math
 import time
 import numpy as np
-import torch.nn as nn
+import numpy.polynomial.polynomial as polynomial
 
 import pybullet as p
 import pybullet_data
 from pybullet_utils import bullet_client
 
-from dronectrl import *
+from drone import *
+from railObject import *
 
 class Environment(bullet_client.BulletClient):
-    def __init__(self, render=True, camera_Hz=24, frame_size=(128, 128)):
+    def __init__(self, render=True):
         super().__init__(p.GUI if render else p.DIRECT)
 
         # default physics looprate is 240 Hz
         self.period = 1. / 240.
+        self.camera_Hz = 24
+        self.rel_cam_Hz = int(240 / self.camera_Hz)
         self.now = time.time()
 
         self.setAdditionalSearchPath(pybullet_data.getDataPath())
         self.render = render
         self.reset()
 
-        """ CAMERA """
-        self.proj_mat = self.computeProjectionMatrixFOV(fov=50.0, aspect=1.0, nearVal=0.1, farVal=255.)
-        self.rgbImg = self.depthImg = self.segImg = None
-        self.rel_cam_Hz = int(240 / camera_Hz)
-        self.frame_size = frame_size
-
-        """ CONSTRUCT THE WORLD LAST """
-        # the world
-        self.planeId = self.loadURDF(
-            "samurai.urdf",
-            useFixedBase=True
-        )
-
-        # spawn rail
-        start_pos = [0, 0, 0]
-        start_orn = self.getQuaternionFromEuler([.5 * math.pi, 0, 0])
-        self.railId = self.loadOBJ(
-            "tracks_obj/rail_straight.obj",
-            basePosition=start_pos,
-            baseOrientation=start_orn
-        )
-
-        # spawn drone
-        self.drone = DroneCtrl(self)
-
 
     def reset(self):
         self.resetSimulation()
         self.setGravity(0, 0, -9.81)
         self.step_count = 0
+
+        """ CONSTRUCT THE WORLD """
+        self.planeId = self.loadURDF(
+            "plane.urdf",
+            useFixedBase=True
+        )
+
+        # start rail graph
+        start_pos = np.array([0, 0, 0])
+        start_orn = np.array([0.5*math.pi, 0, 0])
+        rail = RailObject(self, start_pos, start_orn, 'tracks_obj/rail_straight.obj')
+        self.railIds = np.array([rail.Id])
+        self.rail_head = rail.get_end(0)
+        self.rail_tail = rail.get_end(1)
+
+        # spawn drone
+        self.drone = Drone(self, camera_Hz=self.camera_Hz)
+        self.drone.reset()
 
 
     def step(self):
@@ -68,66 +61,54 @@ class Environment(bullet_client.BulletClient):
             time.sleep(max(self.period - elapsed, 0.))
             self.now = time.time()
 
-        self.drone.rpm2forces(np.array([1., 1., 1., 1.]))
+        self.drone.update()
 
         self.stepSimulation()
         self.step_count += 1
 
         if self.step_count % self.rel_cam_Hz == 0:
-            self.capture_image()
+            self.handle_rail_bounds()
+            self.drone.capture_image()
             return True
 
 
-    @property
-    def view_mat(self):
-        # get the state of the camera on the robot
-        camera_state = self.getLinkState(self.drone.Id, 4)
+    def handle_rail_bounds(self):
+        dis2head = np.sum((self.rail_head.base_pos[:2] - self.drone.state[-1][:2]) ** 2) ** 0.5
+        dis2tail = np.sum((self.rail_tail.base_pos[:2] - self.drone.state[-1][:2]) ** 2) ** 0.5
 
-        # pose and rot
-        position = camera_state[0]
-        rotation = np.array(self.getMatrixFromQuaternion(camera_state[1])).reshape(3, 3)
+        # delete the head if it's too far and get the new one
+        if dis2head > 20:
+            deleted, self.rail_head = self.rail_head.delete(0)
+            self.railIds = [id for id in self.railIds if id not in deleted]
 
-        # compute camera up vector using rot_mat
-        up_vector = np.matmul(rotation, np.array([0., 0., 1.]))
-
-        # target position is 1000 units ahead of camera relative to the current camera pos
-        target = np.dot(rotation, np.array([1000, 0, 0])) + np.array(position)
-
-        return self.computeViewMatrix(
-            cameraEyePosition=position,
-            cameraTargetPosition=target,
-            cameraUpVector=up_vector
-        )
+        # create new tail if it's too near
+        if dis2tail < 20:
+            self.rail_tail.add_child('tracks_obj/rail_straight.obj')
+            self.rail_tail = self.rail_tail.get_end(1)
+            self.railIds = np.append(self.railIds, self.rail_tail.Id)
 
 
-    def capture_image(self):
-        _, _, self.rgbImg, self.depthImg, self.segImg = self.getCameraImage(
-            width=self.frame_size[1],
-            height=self.frame_size[0],
-            viewMatrix=self.view_mat,
-            projectionMatrix=self.proj_mat
-        )
+    def get_flight_target(self):
+        railImg = np.isin(self.drone.segImg, self.railIds)
 
+        if np.sum(railImg) > 1:
+            angles = self.drone.a_array[railImg.flatten()]
 
-    def loadOBJ(self, fileName, meshScale=[1., 1., 1.], basePosition=[0., 0., 0.], baseOrientation=[0., 0., 0.]):
-        visualId = self.createVisualShape(
-            shapeType=self.GEOM_MESH,
-            fileName=fileName,
-            rgbaColor=[1, 1, 1, 1],
-            specularColor=[0., 0., 0.],
-            meshScale=meshScale
-        )
+            y = self.drone.state[3][-1] / np.cos(angles[:, 1]) * np.cos(angles[:, 0])
+            x = self.drone.state[3][-1] / np.cos(angles[:, 1]) * np.sin(angles[:, 0])
 
-        collisionId = self.createCollisionShape(
-            shapeType=self.GEOM_MESH,
-            fileName=fileName,
-            meshScale=meshScale
-        )
+            poly = polynomial.Polynomial.fit(y, x, 1).convert(domain=(-1, 1))
+            location = polynomial.polyval(1., [*poly])
+            gradient = math.atan(polynomial.polyval(1., [*poly.deriv()]))
 
-        return self.createMultiBody(
-            baseMass=0,
-            baseCollisionShapeIndex=collisionId,
-            baseVisualShapeIndex=visualId,
-            basePosition=basePosition,
-            baseOrientation=baseOrientation
-        )
+            c = np.cos(gradient)
+            s = np.sin(gradient)
+            rot = (np.array([[c, -s], [s, c]]))
+
+            vel = np.matmul(rot, np.array([[-location], [3.]])).flatten()
+
+            target = np.array([*vel, gradient, 2.])
+        else:
+            target = np.array([0, 0, 0, 2.])
+
+        return target
