@@ -15,12 +15,31 @@ class RailObject():
 
         self.p = p
 
-        self.start_pos = start_pos
-        self.start_orn = start_orn
-        self.end_pos = self.start_pos + np.array([0, 20.24, 0])
-        self.end_orn = self.start_orn + np.array([0, 0, 0])
-        self.base_pos = self.start_pos + np.array([0, 10.12, 0])
-        self.base_orn = self.start_orn
+        ROT = 0.105
+
+        if 'straight' in obj_file:
+            self.start_pos = start_pos
+            self.start_orn = start_orn
+            self.end_pos = self.start_pos + np.array([20.24*np.sin(-start_orn[-1]), 20.24*np.cos(start_orn[-1]), 0])
+            self.end_orn = self.start_orn + np.array([0, 0, 0])
+            self.base_pos = self.start_pos + np.array([10.12*np.sin(-start_orn[-1]), 10.12*np.cos(start_orn[-1]), 0])
+            self.base_orn = self.start_orn
+        elif 'left' in obj_file:
+            rotation = ROT + start_orn[-1]
+            self.start_pos = start_pos
+            self.start_orn = start_orn
+            self.end_pos = self.start_pos + np.array([20.24*np.sin(-rotation), 20.24*np.cos(rotation), 0])
+            self.end_orn = self.start_orn + np.array([0, 0, ROT*3])
+            self.base_pos = self.start_pos + np.array([10.12*np.sin(-start_orn[-1]), 10.12*np.cos(start_orn[-1]), 0])
+            self.base_orn = self.start_orn
+        elif 'right' in obj_file:
+            rotation = -ROT + start_orn[-1]
+            self.start_pos = start_pos
+            self.start_orn = start_orn
+            self.end_pos = self.start_pos + np.array([20.24*np.sin(-rotation), 20.24*np.cos(rotation), 0])
+            self.end_orn = self.start_orn + np.array([0, 0, -ROT*3])
+            self.base_pos = self.start_pos + np.array([10.12*np.sin(-start_orn[-1]), 10.12*np.cos(start_orn[-1]), 0])
+            self.base_orn = self.start_orn
 
         # a straight rail has length 20.24
         self.Id = self.loadOBJ(

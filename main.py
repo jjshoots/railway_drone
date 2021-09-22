@@ -21,7 +21,7 @@ def main():
             env.drone.setpoint = env.get_flight_target()
 
         # every 1000 time steps (~ 4 seconds), change the texture of the floor
-        if i % 1000 == 999:
+        if i % 1000 == 2:
             env.changeVisualShape(env.planeId, -1, textureUniqueId=tex.get_random_texture())
 
             tex_id = tex.get_random_texture()
