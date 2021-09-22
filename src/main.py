@@ -6,38 +6,30 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from env.environment import *
-from env.texturePack import *
 
 def main():
-    # initialize the environment
-    env = Environment(rails_dir='models/rails/', render=True)
-    tex = TexturePack('models/textures/')
-    env.drone.set_mode(4)
+    num_envs = 3
+    envs = [Environment(rails_dir='models/rails/', drone_dir='models/vehicles/', tex_dir='models/textures/') for _ in range(num_envs)]
 
-    """ SIMULATE """
-    # simulate
-    for i in range (100000):
+    track_state = np.zeros((num_envs, 2))
+    stack_obs = [None] * num_envs
 
-        if i < 500:
-            env.step()
-            pass
-        elif i > 500 and i < 2000:
-            env.step()
-            env.drone.setpoint = np.array([0, 0, 0, 2])
-        else:
-            if env.step():
-                env.drone.setpoint = env.get_flight_target()
+    cv2.namedWindow('display', cv2.WINDOW_NORMAL)
 
-        # every 1000 time steps (~ 4 seconds), change the texture of the floor
-        if i % 1000 == 2:
-            env.changeVisualShape(env.planeId, -1, textureUniqueId=tex.get_random_texture())
+    while True:
+        for i, env in enumerate(envs):
+            obs, rew, done, info = env.step(track_state[i])
 
-            tex_id = tex.get_random_texture()
-            env.change_rail_texture(tex_id)
+            if done:
+                env.reset()
 
-    """ DISCONNECT """
-    # disconnect
-    env.disconnect()
+            stack_obs[i] = obs
+            track_state[i] = info
 
-if __name__ == "__main__":
+        img = np.concatenate(stack_obs, axis=1)
+        cv2.imshow('display', img)
+        cv2.waitKey(1)
+
+
+if __name__ == '__main__':
     main()

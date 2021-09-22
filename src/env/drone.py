@@ -8,16 +8,20 @@ import pybullet as p
 from pybullet_utils import bullet_client
 
 class Drone():
-    def __init__(self, p: bullet_client.BulletClient, camera_Hz=24, camera_FOV=90, frame_size=(128, 128), seg_ratio=4.):
+    def __init__(self, p: bullet_client.BulletClient, drone_dir, camera_Hz=24, camera_FOV=90, frame_size=(128, 128), seg_ratio=4.):
         # default physics looprate is 240 Hz
         self.p = p
         self.period = 1. / 240.
 
         # spawn drone
-        self.start_pos = [2, 0, 0.2]
-        self.start_orn = self.p.getQuaternionFromEuler([0, 0, 1])
+        start_x = (np.random.rand() - 0.5) * 4
+        start_x += np.sign(start_x) * 2
+        start_y = (np.random.rand() - 0.5) * 8
+        start_rot = np.random.rand() * np.sign(start_x)
+        self.start_pos = [start_x, start_y, 2]
+        self.start_orn = self.p.getQuaternionFromEuler([0, 0, start_rot])
         self.Id = self.p.loadURDF(
-            "models/vehicles/primitive_car/car.urdf",
+            drone_dir + "/primitive_car/car.urdf",
             basePosition=self.start_pos,
             baseOrientation=self.start_orn,
             useFixedBase=False
@@ -63,8 +67,8 @@ class Drone():
         self.lim_ang_pos = np.array([5., 5., 5.])
 
         # outputs angular position
-        self.Kp_lin_vel = np.array([1., 1.])
-        self.Ki_lin_vel = np.array([0.001, 0.001])
+        self.Kp_lin_vel = np.array([0.5, 0.5])
+        self.Ki_lin_vel = np.array([1e-4, 1e-4])
         self.Kd_lin_vel = np.array([0.2, 0.2])
         self.lim_lin_vel = np.array([0.6, 0.6])
 
