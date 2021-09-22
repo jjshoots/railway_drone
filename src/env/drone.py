@@ -2,13 +2,13 @@ import cv2
 import math
 import numpy as np
 
-from PID import *
+from env.PID import *
 
 import pybullet as p
 from pybullet_utils import bullet_client
 
 class Drone():
-    def __init__(self, p: bullet_client.BulletClient, camera_Hz=24, camera_FOV=90, frame_size=(256, 256), seg_ratio=8.):
+    def __init__(self, p: bullet_client.BulletClient, camera_Hz=24, camera_FOV=90, frame_size=(128, 128), seg_ratio=4.):
         # default physics looprate is 240 Hz
         self.p = p
         self.period = 1. / 240.
@@ -17,7 +17,7 @@ class Drone():
         self.start_pos = [2, 0, 0.2]
         self.start_orn = self.p.getQuaternionFromEuler([0, 0, 1])
         self.Id = self.p.loadURDF(
-            "models/primitive_car/car.urdf",
+            "models/vehicles/primitive_car/car.urdf",
             basePosition=self.start_pos,
             baseOrientation=self.start_orn,
             useFixedBase=False
@@ -63,9 +63,9 @@ class Drone():
         self.lim_ang_pos = np.array([5., 5., 5.])
 
         # outputs angular position
-        self.Kp_lin_vel = np.array([.6, .6])
+        self.Kp_lin_vel = np.array([1., 1.])
         self.Ki_lin_vel = np.array([0.001, 0.001])
-        self.Kd_lin_vel = np.array([0.1, 0.1])
+        self.Kd_lin_vel = np.array([0.2, 0.2])
         self.lim_lin_vel = np.array([0.6, 0.6])
 
         # height controllers

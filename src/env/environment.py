@@ -9,12 +9,14 @@ import pybullet as p
 import pybullet_data
 from pybullet_utils import bullet_client
 
-from drone import *
-from railObject import *
+from env.drone import *
+from env.railObject import *
 
 class Environment(bullet_client.BulletClient):
-    def __init__(self, render=True):
+    def __init__(self, rails_dir, render=True):
         super().__init__(p.GUI if render else p.DIRECT)
+
+        self.rails_dir = rails_dir
 
         # default physics looprate is 240 Hz
         self.period = 1. / 240.
@@ -41,7 +43,7 @@ class Environment(bullet_client.BulletClient):
         # start rail graph
         start_pos = np.array([0, 0, 0])
         start_orn = np.array([0.5*math.pi, 0, 0])
-        rail = RailObject(self, start_pos, start_orn, 'tracks_obj/rail_turn_left.obj')
+        rail = RailObject(self, start_pos, start_orn, self.rails_dir+'rail_turn_left.obj')
         self.railIds = np.array([rail.Id])
         self.rail_head = rail.get_end(0)
         self.rail_tail = rail.get_end(1)
@@ -85,12 +87,13 @@ class Environment(bullet_client.BulletClient):
 
         # create new tail if it's too near
         if dis2tail < 20:
-            rand_idx = np.random.randint(0, 3)
-            obj_file = 'tracks_obj/rail_straight.obj'
+            # rand_idx = np.random.randint(0, 3)
+            rand_idx = 1
+            obj_file = self.rails_dir + 'rail_straight.obj'
             if rand_idx == 1:
-                obj_file = 'tracks_obj/rail_turn_left.obj'
+                obj_file = self.rails_dir + 'rail_turn_left.obj'
             if rand_idx == 2:
-                obj_file = 'tracks_obj/rail_turn_right.obj'
+                obj_file = self.rails_dir + 'rail_turn_right.obj'
             self.rail_tail.add_child(obj_file)
             self.rail_tail = self.rail_tail.get_end(1)
             self.railIds = np.append(self.railIds, self.rail_tail.Id)
@@ -126,9 +129,9 @@ class Environment(bullet_client.BulletClient):
             s = np.sin(gradient)
             rot = (np.array([[c, -s], [s, c]]))
 
-            vel = np.matmul(rot, np.array([[-2 * location], [5.]])).flatten()
+            vel = np.matmul(rot, np.array([[-2 * location], [6.]])).flatten()
 
-            target = np.array([*vel, gradient, 2.])
+            target = np.array([*vel, 2 * gradient, 2.])
         else:
             target = np.array([0, 0, 0, 2.])
 

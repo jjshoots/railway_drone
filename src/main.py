@@ -5,13 +5,13 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-from environment import *
-from texturePack import *
+from env.environment import *
+from env.texturePack import *
 
 def main():
     # initialize the environment
-    env = Environment(render=True)
-    tex = TexturePack('dtd')
+    env = Environment(rails_dir='models/rails/', render=True)
+    tex = TexturePack('models/textures/')
     env.drone.set_mode(4)
 
     """ SIMULATE """
