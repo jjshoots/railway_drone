@@ -1,3 +1,4 @@
+import cv2
 import math
 import numpy as np
 
@@ -7,13 +8,13 @@ import pybullet as p
 from pybullet_utils import bullet_client
 
 class Drone():
-    def __init__(self, p: bullet_client.BulletClient, camera_Hz=24, camera_FOV=90, frame_size=(16, 16)):
+    def __init__(self, p: bullet_client.BulletClient, camera_Hz=24, camera_FOV=90, frame_size=(256, 256), seg_ratio=8.):
         # default physics looprate is 240 Hz
         self.p = p
         self.period = 1. / 240.
 
         # spawn drone
-        self.start_pos = [1, 0, 2]
+        self.start_pos = [2, 0, 0.2]
         self.start_orn = self.p.getQuaternionFromEuler([0, 0, 1])
         self.Id = self.p.loadURDF(
             "models/primitive_car/car.urdf",
@@ -83,12 +84,13 @@ class Drone():
         self.rel_cam_Hz = int(240 / camera_Hz)
         self.camera_FOV = camera_FOV
         self.frame_size = np.array(frame_size)
-        self.rpp = (camera_FOV / 180 * math.pi) / self.frame_size
-        self.centre_idx = (self.frame_size+1) / 2
+        self.seg_size = (self.frame_size / seg_ratio).astype(np.int)
+        self.seg_centre = (self.seg_size+1) / 2
+        self.rpp = (camera_FOV / 180 * math.pi) / self.seg_size
 
-        xspace = np.arange(self.frame_size[0], 0, -1)
-        yspace = np.arange(self.frame_size[1], 0, -1)
-        self.a_array = np.stack(np.meshgrid(xspace, yspace), axis=-1) - self.centre_idx
+        xspace = np.arange(self.seg_size[0], 0, -1)
+        yspace = np.arange(self.seg_size[1], 0, -1)
+        self.a_array = np.stack(np.meshgrid(xspace, yspace), axis=-1) - self.seg_centre
         self.a_array *= self.rpp
         self.a_array[:, :, 1] += math.pi/4
         self.a_array = self.a_array.reshape(-1, 2)
@@ -231,7 +233,8 @@ class Drone():
         if True:
             rotation = np.array(self.p.getEulerFromQuaternion(camera_state[1]))
             rotation[:2] = 0.
-            rotation[1] = (90 - 0.5 * self.camera_FOV) / 180 * math.pi
+            # rotation[1] = (90 - 0.5 * self.camera_FOV) / 180 * math.pi
+            rotation[1] = 45 / 180 * math.pi
             rotation = np.array(self.p.getQuaternionFromEuler(rotation))
             rotation = np.array(self.p.getMatrixFromQuaternion(rotation)).reshape(3, 3)
         else:
@@ -256,3 +259,5 @@ class Drone():
             viewMatrix=self.view_mat,
             projectionMatrix=self.proj_mat
         )
+
+        self.segImg = cv2.resize(self.segImg, (self.seg_size[0], self.seg_size[1]), interpolation=cv2.INTER_NEAREST)

@@ -7,15 +7,14 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +19 main.py
-badd +71 environment.py
-badd +20 main2.py
-badd +36 dronectrl.py
-badd +134 models/primitive_car/car.xacro
+badd +25 main.py
+badd +97 environment.py
+badd +17 drone.py
+badd +1 texturePack.py
 argglobal
 %argdel
 $argadd ./
-edit dronectrl.py
+edit main.py
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -33,12 +32,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 36 - ((31 * winheight(0) + 22) / 44)
+let s:l = 25 - ((24 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-36
-normal! 047|
+25
+normal! 021|
 if exists(':tcd') == 2 | tcd ~/Sandboxes/test_bullet | endif
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
