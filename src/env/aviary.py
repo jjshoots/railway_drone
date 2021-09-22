@@ -110,18 +110,14 @@ class Aviary(bullet_client.BulletClient):
         railImg = np.isin(self.drone.segImg, self.railIds)
 
         if np.sum(railImg) > 1:
-            angles = self.drone.a_array[railImg.flatten()]
+            proj = self.drone.inv_proj[railImg.flatten()] * self.drone.state[-1][-1]
 
-            h = abs(self.drone.state[3][-1] / np.cos(angles[:, 1]))
-            y = h * np.sin(angles[:, 1])
-            x = h * np.tan(angles[:, 0])
-
-            # plt.scatter(x, y)
+            # plt.scatter(proj[:, 0], proj[:, 1])
             # plt.gca().set_aspect('equal', adjustable='box')
             # plt.show()
             # exit()
 
-            poly = polynomial.Polynomial.fit(y, x, 2).convert(domain=(-1, 1))
+            poly = polynomial.Polynomial.fit(proj[:, 1], proj[:, 0], 2).convert(domain=(-1, 1))
             pos = polynomial.polyval(1., [*poly])
             orn = math.atan(polynomial.polyval(1., [*poly.deriv()]))
 

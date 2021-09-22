@@ -92,12 +92,18 @@ class Drone():
         self.seg_centre = (self.seg_size+1) / 2
         self.rpp = (camera_FOV / 180 * math.pi) / self.seg_size
 
+        # form the array for inverse projection later
         xspace = np.arange(self.seg_size[0], 0, -1)
         yspace = np.arange(self.seg_size[1], 0, -1)
-        self.a_array = np.stack(np.meshgrid(xspace, yspace), axis=-1) - self.seg_centre
-        self.a_array *= self.rpp
-        self.a_array[:, :, 1] += math.pi/4
-        self.a_array = self.a_array.reshape(-1, 2)
+        a_array = np.stack(np.meshgrid(xspace, yspace), axis=-1) - self.seg_centre
+        a_array *= self.rpp
+        a_array[:, :, 1] += math.pi/4
+        a_array = a_array.reshape(-1, 2)
+
+        y = np.sin(a_array[:, 1]) / abs(np.cos(a_array[:, 1]))
+        x = np.tan(a_array[:, 0]) / abs(np.cos(a_array[:, 1]))
+
+        self.inv_proj = np.stack((x, y), axis=-1)
 
 
     def reset(self):
