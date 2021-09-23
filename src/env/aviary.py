@@ -48,6 +48,7 @@ class Aviary(bullet_client.BulletClient):
         self.railIds = np.array([rail.Id])
         self.rail_head = rail.get_end(0)
         self.rail_tail = rail.get_end(1)
+        self.tex_id = None
 
         # spawn drone
         self.drone = Drone(self, drone_dir=self.drone_dir, camera_Hz=self.camera_Hz)
@@ -91,8 +92,8 @@ class Aviary(bullet_client.BulletClient):
         # create new tail if it's too near
         if dis2tail < 40:
             rand_idx = np.random.randint(0, 3)
-            # rand_idx = 1
             obj_file = self.rails_dir + 'rail_straight.obj'
+            # rand_idx = 1
             if rand_idx == 1:
                 obj_file = self.rails_dir + 'rail_turn_left.obj'
             if rand_idx == 2:
@@ -100,7 +101,8 @@ class Aviary(bullet_client.BulletClient):
             self.rail_tail.add_child(obj_file)
             self.rail_tail = self.rail_tail.get_end(1)
             self.railIds = np.append(self.railIds, self.rail_tail.Id)
-            self.changeVisualShape(self.rail_tail.Id, -1, textureUniqueId=self.tex_id)
+            if self.tex_id is not None:
+                self.changeVisualShape(self.rail_tail.Id, -1, textureUniqueId=self.tex_id)
 
 
     def change_rail_texture(self, tex_id):
