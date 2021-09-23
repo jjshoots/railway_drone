@@ -6,7 +6,8 @@ import matplotlib.pyplot as plt
 from env.environment import *
 
 def main():
-    num_envs = 16
+    grid_size = 4
+    num_envs = grid_size ** 2
     envs = [
         Environment(
             rails_dir='models/rails/',
@@ -33,7 +34,11 @@ def main():
             stack_obs[i] = obs
             track_state[i] = info
 
-        img = np.concatenate(stack_obs, axis=1)
+        img = []
+        for i in range(grid_size):
+            img.append(np.concatenate(stack_obs[i*grid_size:i*grid_size+grid_size], axis=1))
+        img = np.concatenate(img, axis=0)
+
         cv2.imshow('display', img)
         cv2.waitKey(1)
 
