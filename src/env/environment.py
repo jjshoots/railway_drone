@@ -1,4 +1,6 @@
+import os
 import cv2
+import glob
 import math
 import time
 import numpy as np
@@ -6,17 +8,18 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from env.aviary import *
-from env.texturePack import *
 
 class Environment():
     """
     Wrapper for Aviary and Drone Classes
     """
-    def __init__(self, rails_dir, drone_dir, tex_dir, max_steps=2000):
+    def __init__(self, rails_dir, drone_dir, tex_dir, num_envs, max_steps=math.inf):
         self.max_steps = max_steps
         self.rails_dir = rails_dir
         self.drone_dir = drone_dir
-        self.tex_dir = tex_dir
+        self.texture_paths = glob.glob(os.path.join(tex_dir, '**', '*.jpg'), recursive=True)
+
+        self.render = num_envs == 1
 
         self.reset()
 
@@ -29,8 +32,7 @@ class Environment():
 
         self.step_count = 0
 
-        self.env = Aviary(rails_dir=self.rails_dir, drone_dir=self.drone_dir, render=False)
-        self.tex = TexturePack(self.env, self.tex_dir)
+        self.env = Aviary(rails_dir=self.rails_dir, drone_dir=self.drone_dir, render=self.render)
         self.env.drone.set_mode(4)
 
         self.update_textures()
@@ -73,8 +75,13 @@ class Environment():
 
 
     def update_textures(self):
-        tex_id = self.tex.get_random_texture()
+        tex_id = self.get_random_texture()
         self.env.changeVisualShape(self.env.planeId, -1, textureUniqueId=tex_id)
-        tex_id = self.tex.get_random_texture()
+        tex_id = self.get_random_texture()
         self.env.change_rail_texture(tex_id)
+
+
+    def get_random_texture(self) -> int:
+        texture_path = self.texture_paths[np.random.randint(0, len(self.texture_paths) - 1)]
+        return self.env.loadTexture(texture_path)
 

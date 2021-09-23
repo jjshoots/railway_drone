@@ -18,6 +18,10 @@ class Drone():
         start_x += np.sign(start_x) * 2
         start_y = (np.random.rand() - 0.5) * 8
         start_rot = np.random.rand() * np.sign(start_x)
+
+        # start_x = 0
+        # start_y = 0
+        # start_rot = 0
         self.start_pos = [start_x, start_y, 2]
         self.start_orn = self.p.getQuaternionFromEuler([0, 0, start_rot])
         self.Id = self.p.loadURDF(
@@ -89,14 +93,15 @@ class Drone():
         self.camera_FOV = camera_FOV
         self.frame_size = np.array(frame_size)
         self.seg_size = (self.frame_size / seg_ratio).astype(np.int)
-        self.seg_centre = (self.seg_size+1) / 2
-        self.rpp = (camera_FOV / 180 * math.pi) / self.seg_size
 
         # form the array for inverse projection later
+        seg_centre = (self.seg_size+1) / 2
+        rpp = (camera_FOV / 180 * math.pi) / self.seg_size
+
         xspace = np.arange(self.seg_size[0], 0, -1)
         yspace = np.arange(self.seg_size[1], 0, -1)
-        a_array = np.stack(np.meshgrid(xspace, yspace), axis=-1) - self.seg_centre
-        a_array *= self.rpp
+        a_array = np.stack(np.meshgrid(xspace, yspace), axis=-1) - seg_centre
+        a_array *= rpp
         a_array[:, :, 1] += math.pi/4
         a_array = a_array.reshape(-1, 2)
 

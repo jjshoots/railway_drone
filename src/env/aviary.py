@@ -44,7 +44,7 @@ class Aviary(bullet_client.BulletClient):
         # start rail graph
         start_pos = np.array([0, 0, 0])
         start_orn = np.array([0.5*math.pi, 0, 0])
-        rail = RailObject(self, start_pos, start_orn, self.rails_dir+'rail_turn_left.obj')
+        rail = RailObject(self, start_pos, start_orn, self.rails_dir+'rail_straight.obj')
         self.railIds = np.array([rail.Id])
         self.rail_head = rail.get_end(0)
         self.rail_tail = rail.get_end(1)
@@ -65,6 +65,8 @@ class Aviary(bullet_client.BulletClient):
             elapsed = time.time() - self.now
             time.sleep(max(self.period - elapsed, 0.))
             self.now = time.time()
+
+            print(f'RTF: {self.period / (elapsed + 1e-6)}')
 
         self.drone.update()
 
@@ -87,8 +89,9 @@ class Aviary(bullet_client.BulletClient):
             self.railIds = [id for id in self.railIds if id not in deleted]
 
         # create new tail if it's too near
-        if dis2tail < 20:
+        if dis2tail < 40:
             rand_idx = np.random.randint(0, 3)
+            # rand_idx = 1
             obj_file = self.rails_dir + 'rail_straight.obj'
             if rand_idx == 1:
                 obj_file = self.rails_dir + 'rail_turn_left.obj'
@@ -129,7 +132,6 @@ class Aviary(bullet_client.BulletClient):
 
 
     def flight_target(self, track_state: np.ndarray) -> np.ndarray:
-
         c = np.cos(track_state[1])
         s = np.sin(track_state[1])
         rot = (np.array([[c, -s], [s, c]]))

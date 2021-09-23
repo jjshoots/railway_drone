@@ -8,8 +8,16 @@ import matplotlib.pyplot as plt
 from env.environment import *
 
 def main():
-    num_envs = 3
-    envs = [Environment(rails_dir='models/rails/', drone_dir='models/vehicles/', tex_dir='models/textures/') for _ in range(num_envs)]
+    num_envs = 2
+    envs = [
+        Environment(
+            rails_dir='models/rails/',
+            drone_dir='models/vehicles/',
+            tex_dir='models/textures/',
+            num_envs=num_envs,
+            max_steps=20000)
+        for _ in range(num_envs)
+        ]
 
     track_state = np.zeros((num_envs, 2))
     stack_obs = [None] * num_envs
