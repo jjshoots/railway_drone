@@ -13,6 +13,7 @@ class Drone():
         self.p = p
         self.period = 1. / 240.
 
+        """ SPAWN """
         # spawn drone
         start_x = (np.random.rand() - 0.5) * 4
         start_x += np.sign(start_x) * 2
@@ -32,7 +33,7 @@ class Drone():
         )
 
         """
-        DRONE STUFF
+        DRONE CONTROL
             motor_id corresponds to QuadrotorX in PX4
             control commands are in the form of pitch-roll-yaw-thrust
                 using ENU convention
@@ -97,7 +98,6 @@ class Drone():
         # form the array for inverse projection later
         seg_centre = (self.seg_size+1) / 2
         rpp = (camera_FOV / 180 * math.pi) / self.seg_size
-
         xspace = np.arange(self.seg_size[0], 0, -1)
         yspace = np.arange(self.seg_size[1], 0, -1)
         a_array = np.stack(np.meshgrid(xspace, yspace), axis=-1) - seg_centre
@@ -126,6 +126,7 @@ class Drone():
         thrust = rpm * self.thr_coeff
         torque = rpm * self.tor_coeff * self.tor_dir
 
+        # add some random noise to the motor outputs
         thrust += np.random.randn(*thrust.shape) * self.noise_ratio * thrust
         torque += np.random.randn(*torque.shape) * self.noise_ratio * torque
 
@@ -143,7 +144,6 @@ class Drone():
 
     def cmd2pwm(self, cmd):
         """ maps angular torque commands to motor rpms """
-        # print(cmd)
         pwm = np.matmul(self.motor_map, cmd)
 
         min = np.min(pwm)
@@ -247,9 +247,9 @@ class Drone():
         rotation = None
         if True:
             rotation = np.array(self.p.getEulerFromQuaternion(camera_state[1]))
-            rotation[:2] = 0.
-            # rotation[1] = (90 - 0.5 * self.camera_FOV) / 180 * math.pi
+            rotation[0] = 0.
             rotation[1] = 45 / 180 * math.pi
+            # rotation[1] = (90 - 0.5 * self.camera_FOV) / 180 * math.pi
             rotation = np.array(self.p.getQuaternionFromEuler(rotation))
             rotation = np.array(self.p.getMatrixFromQuaternion(rotation)).reshape(3, 3)
         else:
@@ -267,12 +267,17 @@ class Drone():
             cameraUpVector=up_vector
         )
 
+
     def capture_image(self):
         _, _, self.rgbImg, self.depthImg, self.segImg = self.p.getCameraImage(
             width=self.frame_size[1],
             height=self.frame_size[0],
             viewMatrix=self.view_mat,
-            projectionMatrix=self.proj_mat
+            projectionMatrix=self.proj_mat,
+            # lightAmbientCoeff=1.,
+            # lightDiffuseCoeff=1.,
+            # lightSpecularCoeff=1.
         )
-
         self.segImg = cv2.resize(self.segImg, (self.seg_size[0], self.seg_size[1]), interpolation=cv2.INTER_NEAREST)
+        # self.rgbImg = cv2.GaussianBlur(self.rgbImg, (3, 3), 0)
+

@@ -38,6 +38,14 @@ class RailObject():
             self.end_orn = self.start_orn + np.array([0, 0, -ROT*3])
             self.base_pos = self.start_pos + np.array([10.12*np.sin(-start_orn[-1]), 10.12*np.cos(start_orn[-1]), 0])
             self.base_orn = self.start_orn
+        else:
+            print('IMPORTING UNKNOWN RAIL OBJECT')
+            self.start_pos = start_pos
+            self.start_orn = start_orn
+            self.end_pos = start_pos
+            self.end_orn = start_orn
+            self.base_pos = start_pos
+            self.base_orn = start_orn
 
         # a straight rail has length 20.24
         self.Id = self.loadOBJ(

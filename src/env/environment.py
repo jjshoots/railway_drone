@@ -11,7 +11,7 @@ from env.aviary import *
 
 class Environment():
     """
-    Wrapper for Aviary and Drone Classes
+    Wrapper for Aviary and Drone Classes with domain randomization
     """
     def __init__(self, rails_dir, drone_dir, tex_dir, num_envs, max_steps=math.inf):
         self.max_steps = max_steps
@@ -37,7 +37,8 @@ class Environment():
 
         self.update_textures()
 
-        for _ in range(100):
+        # wait for env to stabilize
+        for _ in range(10):
             self.env.step()
             self.env.drone.setpoint = np.array([0, 0, 0, 2])
 
@@ -75,10 +76,17 @@ class Environment():
 
 
     def update_textures(self):
+        # randomly change the texture, 50% chance of the rail being same texture as floor
         tex_id = self.get_random_texture()
         self.env.changeVisualShape(self.env.planeId, -1, textureUniqueId=tex_id)
-        tex_id = self.get_random_texture()
-        self.env.change_rail_texture(tex_id)
+
+        if np.random.randint(2) == 0:
+            self.env.change_rail_texture(tex_id)
+        else:
+            tex_id = self.get_random_texture()
+            self.env.change_rail_texture(tex_id)
+
+
 
 
     def get_random_texture(self) -> int:
