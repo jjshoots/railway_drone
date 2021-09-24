@@ -5,9 +5,8 @@ class ReplayBuffer():
     """
     Replay buffer that deals with torch tensors but stores as np arrays
     """
-    def __init__(self, mem_size, sparse_forget=4):
+    def __init__(self, mem_size):
         self.mem_size = int(mem_size)
-        self.sparse_forget = sparse_forget
         self.counter = 0
 
         self.state = []

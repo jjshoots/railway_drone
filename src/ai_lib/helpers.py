@@ -178,6 +178,8 @@ class helpers:
         device = 'cpu'
         if(torch.cuda.is_available()):
             device = torch.device('cuda:0')
+
+        print('-----------------------')
         print('Using Device', device)
         print('-----------------------')
 

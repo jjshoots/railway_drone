@@ -1,0 +1,12 @@
+# settings.yaml file
+
+# number of environments to run in parallel
+num_envs: 5
+# maximum steps per environment
+max_steps: 1000
+
+# training params
+buffer_size: 10000
+batch_size: 50
+epochs: 1000
+
