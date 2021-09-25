@@ -93,7 +93,7 @@ class Aviary(bullet_client.BulletClient):
         if dis2tail < 40:
             rand_idx = np.random.randint(0, 3)
             obj_file = self.rails_dir + 'rail_straight.obj'
-            # rand_idx = 1
+            rand_idx = 1
             if rand_idx == 1:
                 obj_file = self.rails_dir + 'rail_turn_left.obj'
             if rand_idx == 2:
@@ -114,17 +114,18 @@ class Aviary(bullet_client.BulletClient):
     def track_state(self) -> np.ndarray:
         railImg = np.isin(self.drone.segImg, self.railIds)
 
-        if np.sum(railImg) > 1:
+        # ensure that there is a sufficient number of points to run polyfit
+        if np.sum(railImg) > self.drone.seg_size[1]:
             proj = self.drone.inv_proj[railImg.flatten()] * self.drone.state[-1][-1]
-
-            # plt.scatter(proj[:, 0], proj[:, 1])
-            # plt.gca().set_aspect('equal', adjustable='box')
-            # plt.show()
-            # exit()
 
             poly = polynomial.Polynomial.fit(proj[:, 1], proj[:, 0], 2).convert(domain=(-1, 1))
             pos = polynomial.polyval(1., [*poly])
             orn = math.atan(polynomial.polyval(1., [*poly.deriv()]))
+
+            # plt.scatter(proj[:, 1], proj[:, 0])
+            # plt.plot(*poly.linspace(n=100, domain=(0, np.max(proj[:, 1]))), 'y')
+            # plt.show()
+            # exit()
 
             return np.array([pos, orn])
 

@@ -43,10 +43,13 @@ def parse_set_args():
 
     # parse settings
     set = None
-    with open(os.path.join(os.path.dirname(__file__), 'settings.yaml')) as f:
+    with open(os.path.join(os.path.dirname(__file__), '../settings.yaml')) as f:
         settings = yaml.load(f, Loader=yaml.FullLoader)
         settings['debug'] = True if args.debug else False
         settings['device'] = helpers.get_device()
+        settings['iter_per_epoch'] = int(settings['buffer_size'] / settings['batch_size'])
+        settings['step_sched_num'] = settings['iter_per_epoch'] * settings['epochs'] / settings['scheduler_steps']
+        settings['buffer_size'] = settings['buffer_size_debug'] if args.debug else settings['buffer_size']
         set = argparse.Namespace(**settings)
 
     # weights and biases

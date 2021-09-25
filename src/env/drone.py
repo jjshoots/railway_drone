@@ -18,7 +18,7 @@ class Drone():
         start_x = (np.random.rand() - 0.5) * 4
         start_x += np.sign(start_x) * 2
         start_y = (np.random.rand() - 0.5) * 8
-        start_rot = np.random.rand() * np.sign(start_x)
+        start_rot = np.random.rand() * np.sign(start_x) * 0.5
 
         # start_x = 0
         # start_y = 0
