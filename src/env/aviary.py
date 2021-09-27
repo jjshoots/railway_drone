@@ -41,14 +41,10 @@ class Aviary(bullet_client.BulletClient):
             useFixedBase=True
         )
 
-        # start rail graph
+        # start rails, the first rail in the list is the main rail to follow
         start_pos = np.array([0, 0, 0])
         start_orn = np.array([0.5*math.pi, 0, 0])
-        rail = RailObject(self, start_pos, start_orn, self.rails_dir+'rail_straight.obj')
-        self.railIds = np.array([rail.Id])
-        self.rail_head = rail.get_end(0)
-        self.rail_tail = rail.get_end(1)
-        self.tex_id = None
+        self.rails = [RailObject(self, start_pos, start_orn, self.rails_dir)]
 
         # spawn drone
         self.drone = Drone(self, drone_dir=self.drone_dir, camera_Hz=self.camera_Hz)
@@ -75,44 +71,14 @@ class Aviary(bullet_client.BulletClient):
         self.step_count += 1
 
         if self.step_count % self.rel_cam_Hz == 0:
-            self.handle_rail_bounds()
+            for rail in self.rails:
+                rail.handle_rail_bounds(self.drone.state[-1][:2])
             self.drone.capture_image()
             return True
 
 
-    def handle_rail_bounds(self):
-        dis2head = np.sum((self.rail_head.base_pos[:2] - self.drone.state[-1][:2]) ** 2) ** 0.5
-        dis2tail = np.sum((self.rail_tail.base_pos[:2] - self.drone.state[-1][:2]) ** 2) ** 0.5
-
-        # delete the head if it's too far and get the new one
-        if dis2head > 20:
-            deleted, self.rail_head = self.rail_head.delete(0)
-            self.railIds = [id for id in self.railIds if id not in deleted]
-
-        # create new tail if it's too near
-        if dis2tail < 40:
-            rand_idx = np.random.randint(0, 3)
-            obj_file = self.rails_dir + 'rail_straight.obj'
-            # rand_idx = 1
-            if rand_idx == 1:
-                obj_file = self.rails_dir + 'rail_turn_left.obj'
-            if rand_idx == 2:
-                obj_file = self.rails_dir + 'rail_turn_right.obj'
-            self.rail_tail.add_child(obj_file)
-            self.rail_tail = self.rail_tail.get_end(1)
-            self.railIds = np.append(self.railIds, self.rail_tail.Id)
-            if self.tex_id is not None:
-                self.changeVisualShape(self.rail_tail.Id, -1, textureUniqueId=self.tex_id)
-
-
-    def change_rail_texture(self, tex_id):
-        self.tex_id = tex_id
-        for id in self.railIds:
-            self.changeVisualShape(id, -1, textureUniqueId=self.tex_id)
-
-
     def track_state(self) -> np.ndarray:
-        railImg = np.isin(self.drone.segImg, self.railIds)
+        railImg = np.isin(self.drone.segImg, self.rails[0].Ids)
 
         # ensure that there is a sufficient number of points to run polyfit
         if np.sum(railImg) > self.drone.seg_size[1]:

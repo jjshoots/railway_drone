@@ -1,8 +1,62 @@
+import math
 import numpy as np
 
 from pybullet_utils import bullet_client
+from env.utilities import *
 
 class RailObject():
+    def __init__(self, p:bullet_client.BulletClient,
+                 start_pos: np.ndarray,
+                 start_orn: np.ndarray,
+                 rails_dir: str
+                 ):
+
+        self.p = p
+        self.rails_dir = rails_dir
+
+        start_pos = np.array([0, 0, 0])
+        start_orn = np.array([0.5*math.pi, 0, 0])
+        rail = RailSingle(p, start_pos, start_orn, self.rails_dir+'rail_straight.obj')
+
+        self.Ids = np.array([rail.Id])
+        self.head = rail.get_end(0)
+        self.tail = rail.get_end(1)
+        self.tex_id = None
+
+
+    def handle_rail_bounds(self, drone_xy):
+        dis2head = np.sum((self.head.base_pos[:2] - drone_xy) ** 2) ** 0.5
+        dis2tail = np.sum((self.tail.base_pos[:2] - drone_xy) ** 2) ** 0.5
+
+        # delete the head if it's too far and get the new one
+        if dis2head > 20:
+            deleted, self.head = self.head.delete(0)
+            self.Ids = [id for id in self.Ids if id not in deleted]
+
+        # create new tail if it's too near
+        if dis2tail < 40:
+            rand_idx = np.random.randint(0, 3)
+            obj_file = self.rails_dir + 'rail_straight.obj'
+            # rand_idx = 1
+            if rand_idx == 1:
+                obj_file = self.rails_dir + 'rail_turn_left.obj'
+            if rand_idx == 2:
+                obj_file = self.rails_dir + 'rail_turn_right.obj'
+            self.tail.add_child(obj_file)
+            self.tail = self.tail.get_end(1)
+            self.Ids = np.append(self.Ids, self.tail.Id)
+            if self.tex_id is not None:
+                self.p.changeVisualShape(self.tail.Id, -1, textureUniqueId=self.tex_id)
+
+
+    def change_rail_texture(self, tex_id):
+        self.tex_id = tex_id
+        for id in self.Ids:
+            self.p.changeVisualShape(id, -1, textureUniqueId=self.tex_id)
+
+
+
+class RailSingle():
     def __init__(
             self, p: bullet_client.BulletClient,
             start_pos: np.ndarray,
@@ -48,7 +102,8 @@ class RailObject():
             self.base_orn = start_orn
 
         # a straight rail has length 20.24
-        self.Id = self.loadOBJ(
+        self.Id = loadOBJ(
+            self.p,
             obj_file,
             basePosition=self.base_pos,
             baseOrientation=self.p.getQuaternionFromEuler(self.base_orn)
@@ -61,7 +116,7 @@ class RailObject():
 
     def add_child(self, obj_file):
         """ adds a single child to the end of the rail """
-        self.linked[1] = RailObject(self.p, self.end_pos, self.end_orn, obj_file, self)
+        self.linked[1] = RailSingle(self.p, self.end_pos, self.end_orn, obj_file, self)
 
 
     def delete(self, dir: int):
@@ -99,26 +154,3 @@ class RailObject():
 
         return node
 
-
-    def loadOBJ(self, fileName, meshScale=[1., 1., 1.], basePosition=[0., 0., 0.], baseOrientation=[0., 0., 0.]):
-        visualId = self.p.createVisualShape(
-            shapeType=self.p.GEOM_MESH,
-            fileName=fileName,
-            rgbaColor=[1, 1, 1, 1],
-            specularColor=[0., 0., 0.],
-            meshScale=meshScale
-        )
-
-        collisionId = self.p.createCollisionShape(
-            shapeType=self.p.GEOM_MESH,
-            fileName=fileName,
-            meshScale=meshScale
-        )
-
-        return self.p.createMultiBody(
-            baseMass=0,
-            baseCollisionShapeIndex=collisionId,
-            baseVisualShapeIndex=visualId,
-            basePosition=basePosition,
-            baseOrientation=baseOrientation
-        )

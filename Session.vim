@@ -7,17 +7,19 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +112 src/main.py
+badd +145 src/main.py
 badd +18 src/settings.yaml
 badd +8 src/ai_lib/normal_inverse_gamma.py
 badd +29 src/ai_lib/trackNet.py
 badd +54 src/utility/shebangs.py
-badd +94 src/env/environment.py
-badd +70 src/env/aviary.py
+badd +44 src/env/aviary.py
+badd +65 src/env/railObject.py
+badd +4 src/env/utilities.py
+badd +95 src/env/environment.py
 argglobal
 %argdel
 $argadd ./
-edit src/utility/shebangs.py
+edit src/env/aviary.py
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -35,12 +37,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 54 - ((38 * winheight(0) + 23) / 46)
+let s:l = 44 - ((31 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-54
-normal! 0
+44
+normal! 076|
 if exists(':tcd') == 2 | tcd ~/Sandboxes/railway_drone | endif
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'

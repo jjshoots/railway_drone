@@ -88,10 +88,12 @@ class Environment():
 
         # randomly change the texture, 50% chance of the rail being same texture as floor
         if np.random.randint(2) == 0:
-            self.env.change_rail_texture(tex_id)
+            for rail in self.env.rails:
+                rail.change_rail_texture(tex_id)
         else:
             tex_id = self.get_random_texture()
-            self.env.change_rail_texture(tex_id)
+            for rail in self.env.rails:
+                rail.change_rail_texture(tex_id)
 
 
     def get_random_texture(self) -> int:
