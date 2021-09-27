@@ -67,7 +67,7 @@ class Aviary(bullet_client.BulletClient):
             time.sleep(max(self.period - elapsed, 0.))
             self.now = time.time()
 
-            print(f'RTF: {self.period / (elapsed + 1e-6)}')
+            # print(f'RTF: {self.period / (elapsed + 1e-6)}')
 
         self.drone.update()
 
@@ -93,7 +93,7 @@ class Aviary(bullet_client.BulletClient):
         if dis2tail < 40:
             rand_idx = np.random.randint(0, 3)
             obj_file = self.rails_dir + 'rail_straight.obj'
-            rand_idx = 1
+            # rand_idx = 1
             if rand_idx == 1:
                 obj_file = self.rails_dir + 'rail_turn_left.obj'
             if rand_idx == 2:

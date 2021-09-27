@@ -66,25 +66,21 @@ def train(set):
 
                 obs = stuff[0].to(set.device)
                 label = stuff[1].to(set.device)
-
                 output = net.forward(obs)
 
-                # sample = NormalInvGamma(*output).rsample()
-                # pred_loss = F.mse_loss(sample, label)
-                # evid_loss = set.reg_lambda * torch.mean(torch.abs(output[0] - label) * (2*output[1] + output[2]))
-                # total_loss = pred_loss + evid_loss
+                pred_loss =NIG_NLL(label, *output)
+                evid_loss = set.reg_lambda * NIG_reg(label, *output)
+                total_loss = pred_loss + evid_loss
 
-                if torch.isnan(torch.sum(output[0])): print('output nan')
-                if torch.isnan(torch.sum(label)): print('label nan')
-
-                pred_loss = F.mse_loss(output[0], label)
-                total_loss = pred_loss
+                # pred_loss = F.mse_loss(output[0], label)
+                # total_loss = pred_loss
 
                 total_loss.backward()
                 net_optim.step()
                 net_sched.step()
 
                 # detect whether we need to save the weights file and record the losses
+                pred_loss = F.mse_loss(output[0], label)
                 net_weights = net_helper.training_checkpoint(loss=pred_loss.data, batch=batch, epoch=epoch)
                 net_optim_weights = net_optim_helper.training_checkpoint(loss=pred_loss.data, batch=batch, epoch=epoch)
                 if net_weights != -1: torch.save(net.state_dict(), net_weights)
@@ -106,6 +102,7 @@ def display(set):
     net.eval()
 
     target = np.zeros((set.num_envs, 2))
+    uncertainty = np.zeros((set.num_envs, 1))
     stack_obs = [None] * set.num_envs
 
     cv2.namedWindow('display', cv2.WINDOW_NORMAL)
@@ -120,7 +117,10 @@ def display(set):
             if True:
                 obs = (obs[..., :-1].transpose(2, 0, 1) - 127.5) / 255.
                 obs = torch.tensor(obs).unsqueeze(0).to(set.device).type(torch.float32)
-                target[i] = net.forward(obs)[0].squeeze(0).detach().cpu().numpy()
+
+                output = net.forward(obs)
+                target[i] = output[0].squeeze(0).detach().cpu().numpy()
+                uncertainty[i] = torch.mean(NIG_uncertainty(output[-2], output[-1])).squeeze(0).detach().cpu().numpy()
             else:
                 target[i] = info
 
@@ -128,6 +128,8 @@ def display(set):
                 env.reset()
 
         img = np.concatenate(stack_obs, axis=1)
+
+        print(uncertainty)
 
         cv2.imshow('display', img)
         cv2.waitKey(1)

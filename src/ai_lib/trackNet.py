@@ -18,15 +18,14 @@ class TrackNet(nn.Module):
         _activation_description = ['lrelu'] * (len(_kernels_description) - 1) + ['identity']
         self.net = Neural_blocks.generate_conv_stack(_channels_description, _kernels_description, _pooling_description, _activation_description)
 
-        offset = torch.tensor([0., 1e-6, 1+1e-6, 1e-6]).unsqueeze(-1).unsqueeze(-1)
-        self.register_buffer('offset', offset, persistent=False)
 
     def forward(self, input):
         input = self.net(input).reshape(-1, 4, 2).permute(1, 0, 2)
 
-        # avoid in place operation to make torch happy
-        output = input.clone()
-        output[1:] = F.softplus(input[1:])
-        output = output + self.offset
+        mu, lognu, logalpha, logbeta = torch.split(input, 1, dim=0)
 
-        return output
+        nu = F.softplus(lognu) + 1e-6
+        alpha = F.softplus(logalpha) + 1. + 1e-6
+        beta = F.softplus(logbeta) + 1e-6
+
+        return torch.cat([mu, nu, alpha, beta], dim=0)

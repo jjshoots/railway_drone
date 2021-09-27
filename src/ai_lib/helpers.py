@@ -90,6 +90,8 @@ class helpers:
 
             # save the network if the running loss is lower than the one we have
             if avg_loss < self.lowest_running_loss:
+                self.skips = 0
+
                 self.lowest_running_loss = avg_loss
 
                 self.mark_number += 1 if self.increment else 0
@@ -108,7 +110,7 @@ class helpers:
 
                 self.weights_file = os.path.join(self.weights_location, f'Version{self.version_number}/weights_intermediary.pth')
                 if readout:
-                    print(F"Passed {self.skips} intervals without saving so far, saving weights to: /weights_intermediary.pth")
+                    print(F"Passed {self.max_skips} intervals without saving so far, saving weights to: /weights_intermediary.pth")
                 return self.weights_file
 
         # return -1 if we are not returning the weights file
