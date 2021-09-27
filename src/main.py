@@ -109,7 +109,6 @@ def display(set):
 
     while True:
         for i, env in enumerate(envs):
-            print(i)
             obs, _, done, info = env.step(target[i])
 
             stack_obs[i] = obs

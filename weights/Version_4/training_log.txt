@@ -524,3 +524,9 @@ New Training Session, Net Version _4
 Epoch, Batch, Running Loss, Lowest Running Loss, Mark Number 
 New Training Session, Net Version _4 
 Epoch, Batch, Running Loss, Lowest Running Loss, Mark Number 
+New Training Session, Net Version _4 
+Epoch, Batch, Running Loss, Lowest Running Loss, Mark Number 
+New Training Session, Net Version _4 
+Epoch, Batch, Running Loss, Lowest Running Loss, Mark Number 
+New Training Session, Net Version _4 
+Epoch, Batch, Running Loss, Lowest Running Loss, Mark Number 

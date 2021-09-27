@@ -59,4 +59,4 @@ def NIG_reg(label, gamma, nu, alpha, beta):
     """
     Regularizer for for NIG distribution, scale the output of this by ~0.01
     """
-    return torch.mean(torch.abs(gamma - label).detach() * (2*nu + alpha))
+    return torch.mean(torch.abs(gamma - label) * (2*nu + alpha))
