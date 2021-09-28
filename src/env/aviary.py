@@ -18,6 +18,7 @@ class Aviary(bullet_client.BulletClient):
 
         self.rails_dir = rails_dir
         self.drone_dir = drone_dir
+        self.initialize_common_meshes()
 
         # default physics looprate is 240 Hz
         self.period = 1. / 240.
@@ -38,17 +39,33 @@ class Aviary(bullet_client.BulletClient):
         """ CONSTRUCT THE WORLD """
         self.planeId = self.loadURDF(
             "plane.urdf",
-            useFixedBase=True
+            useFixedBase=True,
+            globalScaling=np.random.rand() * 20. + 1.
         )
-
-        # start rails, the first rail in the list is the main rail to follow
-        start_pos = np.array([0, 0, 0])
-        start_orn = np.array([0.5*math.pi, 0, 0])
-        self.rails = [RailObject(self, start_pos, start_orn, self.rails_dir)]
 
         # spawn drone
         self.drone = Drone(self, drone_dir=self.drone_dir, camera_Hz=self.camera_Hz)
         self.drone.reset()
+
+        # start rails, the first rail in the list is the main rail to follow
+        self.rails = []
+        start_pos = np.array([0, 0, 0])
+        start_orn = np.array([0.5*math.pi, 0, 0])
+        self.rails.append(RailObject(self, start_pos, start_orn, self.rail_mesh))
+        # start_pos = np.array([3, 0, 0])
+        # start_orn = np.array([0.5*math.pi, 0, 0])
+        # self.rails.append(RailObject(self, start_pos, start_orn, self.rail_mesh))
+        # start_pos = np.array([-3, 0, 0])
+        # start_orn = np.array([0.5*math.pi, 0, 0])
+        # self.rails.append(RailObject(self, start_pos, start_orn, self.rail_mesh))
+
+
+    def initialize_common_meshes(self):
+        self.rail_mesh = [-1, -1, -1]
+        self.rail_mesh[0] = obj_visual(self, self.rails_dir + 'rail_straight.obj')
+        self.rail_mesh[1] = obj_visual(self, self.rails_dir + 'rail_turn_left.obj')
+        self.rail_mesh[2] = obj_visual(self, self.rails_dir + 'rail_turn_right.obj')
+        self.rail_mesh = np.array(self.rail_mesh)
 
 
     def step(self):
@@ -71,13 +88,27 @@ class Aviary(bullet_client.BulletClient):
         self.step_count += 1
 
         if self.step_count % self.rel_cam_Hz == 0:
-            for rail in self.rails:
-                rail.handle_rail_bounds(self.drone.state[-1][:2])
+
+            # handle the rails
+            spawn_id = self.rails[0].handle_rail_bounds(self.drone.state[-1][:2])
+            spawn_id = -2 if spawn_id == -1 else spawn_id
+
+            to_dereference = []
+            for rail in self.rails[1:]:
+                rail.handle_rail_bounds(self.drone.state[-1][:2], spawn_id)
+                if not rail.exists:
+                    to_dereference.append(rail)
+
+            # remove rails that are to be deleted
+            self.rails = [rail for rail in self.rails if rail not in to_dereference]
+
+            # render camera image
             self.drone.capture_image()
             return True
 
 
     def track_state(self) -> np.ndarray:
+        # get the rail image of the main rail (rails[0])
         railImg = np.isin(self.drone.segImg, self.rails[0].Ids)
 
         # ensure that there is a sufficient number of points to run polyfit

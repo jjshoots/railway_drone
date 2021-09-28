@@ -14,6 +14,7 @@ import torch
 import torch.nn.functional as F
 
 from utility.shebangs import *
+from utility.live_plot import *
 
 from env.environment import *
 
@@ -94,6 +95,7 @@ def train(set):
 
 
 def display(set):
+
     set.num_envs = 1
     set.max_steps = math.inf
 
@@ -123,12 +125,12 @@ def display(set):
             else:
                 target[i] = info
 
+            print(uncertainty)
+
             if done:
                 env.reset()
 
         img = np.concatenate(stack_obs, axis=1)
-
-        print(uncertainty)
 
         cv2.imshow('display', img)
         cv2.waitKey(1)

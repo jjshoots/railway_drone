@@ -20,7 +20,7 @@ reg_lambda: 0.01
 # helper params
 weights_directory: "weights"
 optim_weights_directory: "optim_weights"
-tracknet_version: "_4"
+tracknet_version: "_5"
 tracknet_number: 0
 epoch_interval: -1
 batch_interval: 20

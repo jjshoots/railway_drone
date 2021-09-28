@@ -83,6 +83,7 @@ class Environment():
 
 
     def update_textures(self):
+
         tex_id = self.get_random_texture()
         self.env.changeVisualShape(self.env.planeId, -1, textureUniqueId=tex_id)
 

@@ -1,45 +1,50 @@
+import math
 import time
 import numpy as np
+
 import pybullet as p
 import pybullet_data
+from pybullet_utils import bullet_client
 
-def loadOBJ(fileName, meshScale=[1., 1., 1.], basePosition=[0., 0., 0.], baseOrientation=[0., 0., 0.]):
-    visualId = p.createVisualShape(
-        shapeType=p.GEOM_MESH,
-        fileName=fileName,
-        rgbaColor=[1, 1, 1, 1],
-        specularColor=[0., 0., 0.],
-        meshScale=meshScale
+from signal import signal, SIGINT
+
+from env.utilities import *
+
+def shutdown_handler(*_):
+    print("ctrl-c invoked")
+    exit(0)
+
+
+if __name__ == '__main__':
+    signal(SIGINT, shutdown_handler)
+
+    env = bullet_client.BulletClient(p.GUI)
+    env.setAdditionalSearchPath(pybullet_data.getDataPath()) #optionally
+    env.setGravity(0, 0, -9.81)
+
+    """ CONSTRUCT THE WORLD """
+    env.loadURDF(
+        "plane.urdf",
+        useFixedBase=True
     )
 
-    collisionId = p.createCollisionShape(
-        shapeType=p.GEOM_MESH,
-        fileName=fileName,
-        meshScale=meshScale
+    mesh_scale = np.array([1., 1., 1.]) * 0.3
+    grass_visual = obj_visual(env, 'models/plants/grass2.obj', meshScale=mesh_scale)
+    grass_collision = obj_collision(env, 'models/plants/grass2.obj', meshScale=mesh_scale)
+
+    for _ in range(100):
+        base_pos = [np.random.randn(1), np.random.randn(1), 0]
+        base_orn = [math.pi / 2., 0., np.random.randn(1)]
+
+        loadOBJ(env, visualId=grass_visual, basePosition=base_pos, baseOrientation=base_orn)
+
+    env.loadURDF(
+        'models/vehicles/primitive_car/car.urdf',
+        basePosition=[0., 0., 3.],
+        baseOrientation=env.getQuaternionFromEuler([0., 0., 0.]),
+        useFixedBase=False
     )
 
-    return p.createMultiBody(
-        baseMass=0,
-        baseCollisionShapeIndex=collisionId,
-        baseVisualShapeIndex=visualId,
-        basePosition=basePosition,
-        baseOrientation=baseOrientation
-    )
-
-physicsClient = p.connect(p.GUI)
-p.setAdditionalSearchPath(pybullet_data.getDataPath()) #optionally
-p.setGravity(0, 0, -9.81)
-p.step_count = 0
-
-""" CONSTRUCT THE WORLD """
-p.planeId = p.loadURDF(
-    "plane.urdf",
-    useFixedBase=True
-)
-
-# spawn drone
-loadOBJ('../models/vehicles/hector.obj')
-
-while True:
-    time.sleep(1/240.)
-    p.stepSimulation()
+    while True:
+        time.sleep(1/240.)
+        env.stepSimulation()
