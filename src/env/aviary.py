@@ -146,4 +146,3 @@ class Aviary(bullet_client.BulletClient):
         target = np.array([*vel, 2 * track_state[1], 2.])
 
         return target
-

@@ -212,4 +212,3 @@ if __name__ == '__main__':
 
     if args.shutdown:
         os.system('poweroff')
-

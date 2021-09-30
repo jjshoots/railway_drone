@@ -177,5 +177,3 @@ class RailSingle():
             node = node.linked[dir]
 
         return node
-
-

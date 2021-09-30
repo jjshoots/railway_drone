@@ -24,4 +24,3 @@ tracknet_version: "_5"
 tracknet_number: 0
 epoch_interval: -1
 batch_interval: 20
-

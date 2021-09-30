@@ -29,4 +29,3 @@ class TrackNet(nn.Module):
         beta = F.softplus(logbeta) + 1e-6
 
         return torch.cat([mu, nu, alpha, beta], dim=0)
-
