@@ -1,0 +1,4 @@
+__pycache__
+weights/
+optim_weights/
+models/
