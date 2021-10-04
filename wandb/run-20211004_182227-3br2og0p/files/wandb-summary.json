@@ -1,1 +1,0 @@
-{"epoch": 4, "mean_reward": 10.0, "mean_entropy": 0.39217281341552734, "sup_scale": 0.6360455751419067, "log_alpha": -0.023546865209937096, "_runtime": 27, "_timestamp": 1633368174, "_step": 24, "_wandb": {"runtime": 32}}

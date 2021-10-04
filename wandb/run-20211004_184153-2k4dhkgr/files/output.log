@@ -1,9 +1,0 @@
-
-No weights file found, generating new one during training.
-Epoch 1; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
-Epoch 2; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
-Epoch 3; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
-Epoch 4; Batch Number 0; Running Loss 0.15424; Lowest Running Loss 10.00000
-New lowest point, saving weights to: weights/weights0.pth
-Epoch 5; Batch Number 0; Running Loss 0.27355; Lowest Running Loss 0.15424
-Epoch 6; Batch Number 0; Running Loss 0.31782; Lowest Running Loss 0.15424

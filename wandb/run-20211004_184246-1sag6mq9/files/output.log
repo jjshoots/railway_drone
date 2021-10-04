@@ -1,6 +1,0 @@
-
-No weights directory for weights/Version_7, generating new one in 3 seconds.
-No weights directory for optim_weights/Version_7, generating new one in 3 seconds.
-No weights file found, generating new one during training.
-Epoch 1; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
-Epoch 2; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
