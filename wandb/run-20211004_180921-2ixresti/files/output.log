@@ -1,0 +1,8 @@
+
+No weights directory for weights/Version_7, generating new one in 3 seconds.
+No weights directory for optim_weights/Version_7, generating new one in 3 seconds.
+No weights file found, generating new one during training.
+b3Warning[examples/SharedMemory/PhysicsServerCommandProcessor.cpp,13972]:
+Unsupported texture image format [models/textures/images/chequered/chequered_0118.jpg]
+b3Warning[examples/SharedMemory/PhysicsServerCommandProcessor.cpp,13972]:
+Unsupported texture image format [models/textures/images/chequered/chequered_0118.jpg]

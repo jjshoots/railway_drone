@@ -1,0 +1,112 @@
+2021-10-04 19:20:12,393 INFO    MainThread:108188 [internal.py:wandb_internal():86] W&B internal server running at pid: 108188, started at: 2021-10-04 19:20:12.393431
+2021-10-04 19:20:12,395 INFO    WriterThread:108188 [datastore.py:open_for_write():77] open: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/run-mzgbrdz9.wandb
+2021-10-04 19:20:12,395 DEBUG   HandlerThread:108188 [handler.py:handle_request():128] handle_request: check_version
+2021-10-04 19:20:12,396 DEBUG   SenderThread:108188 [sender.py:send():182] send: header
+2021-10-04 19:20:12,396 DEBUG   SenderThread:108188 [sender.py:send_request():196] send_request: check_version
+2021-10-04 19:20:12,488 DEBUG   SenderThread:108188 [sender.py:send():182] send: run
+2021-10-04 19:20:12,749 INFO    SenderThread:108188 [dir_watcher.py:__init__():168] watching files in: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files
+2021-10-04 19:20:12,749 INFO    SenderThread:108188 [sender.py:_start_run_threads():740] run started: mzgbrdz9 with start time 1633371611
+2021-10-04 19:20:12,749 DEBUG   SenderThread:108188 [sender.py:send():182] send: summary
+2021-10-04 19:20:12,749 DEBUG   HandlerThread:108188 [handler.py:handle_request():128] handle_request: run_start
+2021-10-04 19:20:12,749 INFO    SenderThread:108188 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 19:20:13,648 DEBUG   HandlerThread:108188 [meta.py:__init__():39] meta init
+2021-10-04 19:20:13,648 DEBUG   HandlerThread:108188 [meta.py:__init__():53] meta init done
+2021-10-04 19:20:13,648 DEBUG   HandlerThread:108188 [meta.py:probe():210] probe
+2021-10-04 19:20:13,654 DEBUG   HandlerThread:108188 [meta.py:_setup_git():200] setup git
+2021-10-04 19:20:13,673 DEBUG   HandlerThread:108188 [meta.py:_setup_git():207] setup git done
+2021-10-04 19:20:13,673 DEBUG   HandlerThread:108188 [meta.py:_save_pip():57] save pip
+2021-10-04 19:20:13,673 DEBUG   HandlerThread:108188 [meta.py:_save_pip():71] save pip done
+2021-10-04 19:20:13,673 DEBUG   HandlerThread:108188 [meta.py:probe():252] probe done
+2021-10-04 19:20:13,676 DEBUG   SenderThread:108188 [sender.py:send():182] send: files
+2021-10-04 19:20:13,676 INFO    SenderThread:108188 [sender.py:_save_file():873] saving file wandb-metadata.json with policy now
+2021-10-04 19:20:13,680 DEBUG   HandlerThread:108188 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 19:20:13,680 DEBUG   SenderThread:108188 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 19:20:13,750 INFO    Thread-8  :108188 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/wandb-summary.json
+2021-10-04 19:20:13,751 INFO    Thread-8  :108188 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/requirements.txt
+2021-10-04 19:20:13,751 INFO    Thread-8  :108188 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/wandb-metadata.json
+2021-10-04 19:20:13,751 INFO    Thread-8  :108188 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/output.log
+2021-10-04 19:20:14,283 INFO    Thread-11 :108188 [upload_job.py:push():137] Uploaded file /tmp/tmpabx1qff5wandb/1cftyg1k-wandb-metadata.json
+2021-10-04 19:20:15,750 INFO    Thread-8  :108188 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/output.log
+2021-10-04 19:20:17,751 INFO    Thread-8  :108188 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/output.log
+2021-10-04 19:20:23,753 INFO    Thread-8  :108188 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/output.log
+2021-10-04 19:20:25,754 INFO    Thread-8  :108188 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/output.log
+2021-10-04 19:20:26,721 DEBUG   HandlerThread:108188 [handler.py:handle_request():128] handle_request: poll_exit
+2021-10-04 19:20:26,721 DEBUG   SenderThread:108188 [sender.py:send():182] send: telemetry
+2021-10-04 19:20:26,721 DEBUG   SenderThread:108188 [sender.py:send():182] send: exit
+2021-10-04 19:20:26,721 INFO    SenderThread:108188 [sender.py:send_exit():291] handling exit code: 1
+2021-10-04 19:20:26,721 INFO    SenderThread:108188 [sender.py:send_exit():293] handling runtime: 13
+2021-10-04 19:20:26,721 INFO    SenderThread:108188 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 19:20:26,721 INFO    SenderThread:108188 [sender.py:send_exit():303] send defer
+2021-10-04 19:20:26,721 DEBUG   SenderThread:108188 [sender.py:send_request():196] send_request: poll_exit
+2021-10-04 19:20:26,722 DEBUG   HandlerThread:108188 [handler.py:handle_request():128] handle_request: defer
+2021-10-04 19:20:26,722 INFO    HandlerThread:108188 [handler.py:handle_request_defer():145] handle defer: 0
+2021-10-04 19:20:26,722 DEBUG   SenderThread:108188 [sender.py:send_request():196] send_request: defer
+2021-10-04 19:20:26,722 INFO    SenderThread:108188 [sender.py:send_request_defer():312] handle sender defer: 0
+2021-10-04 19:20:26,722 INFO    SenderThread:108188 [sender.py:transition_state():316] send defer: 1
+2021-10-04 19:20:26,722 DEBUG   HandlerThread:108188 [handler.py:handle_request():128] handle_request: defer
+2021-10-04 19:20:26,722 INFO    HandlerThread:108188 [handler.py:handle_request_defer():145] handle defer: 1
+2021-10-04 19:20:26,755 INFO    Thread-8  :108188 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/wandb-summary.json
+2021-10-04 19:20:26,756 INFO    Thread-8  :108188 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/output.log
+2021-10-04 19:20:26,760 DEBUG   SenderThread:108188 [sender.py:send_request():196] send_request: defer
+2021-10-04 19:20:26,761 INFO    SenderThread:108188 [sender.py:send_request_defer():312] handle sender defer: 1
+2021-10-04 19:20:26,761 INFO    SenderThread:108188 [sender.py:transition_state():316] send defer: 2
+2021-10-04 19:20:26,761 DEBUG   SenderThread:108188 [sender.py:send():182] send: stats
+2021-10-04 19:20:26,762 DEBUG   HandlerThread:108188 [handler.py:handle_request():128] handle_request: defer
+2021-10-04 19:20:26,762 INFO    HandlerThread:108188 [handler.py:handle_request_defer():145] handle defer: 2
+2021-10-04 19:20:26,762 DEBUG   SenderThread:108188 [sender.py:send_request():196] send_request: defer
+2021-10-04 19:20:26,763 INFO    SenderThread:108188 [sender.py:send_request_defer():312] handle sender defer: 2
+2021-10-04 19:20:26,763 INFO    SenderThread:108188 [sender.py:transition_state():316] send defer: 3
+2021-10-04 19:20:26,763 DEBUG   HandlerThread:108188 [handler.py:handle_request():128] handle_request: defer
+2021-10-04 19:20:26,763 INFO    HandlerThread:108188 [handler.py:handle_request_defer():145] handle defer: 3
+2021-10-04 19:20:26,764 DEBUG   SenderThread:108188 [sender.py:send():182] send: summary
+2021-10-04 19:20:26,764 INFO    SenderThread:108188 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 19:20:26,764 DEBUG   SenderThread:108188 [sender.py:send_request():196] send_request: defer
+2021-10-04 19:20:26,764 INFO    SenderThread:108188 [sender.py:send_request_defer():312] handle sender defer: 3
+2021-10-04 19:20:26,765 INFO    SenderThread:108188 [sender.py:transition_state():316] send defer: 4
+2021-10-04 19:20:26,765 DEBUG   HandlerThread:108188 [handler.py:handle_request():128] handle_request: defer
+2021-10-04 19:20:26,765 INFO    HandlerThread:108188 [handler.py:handle_request_defer():145] handle defer: 4
+2021-10-04 19:20:26,765 DEBUG   SenderThread:108188 [sender.py:send_request():196] send_request: defer
+2021-10-04 19:20:26,765 INFO    SenderThread:108188 [sender.py:send_request_defer():312] handle sender defer: 4
+2021-10-04 19:20:26,823 DEBUG   HandlerThread:108188 [handler.py:handle_request():128] handle_request: poll_exit
+2021-10-04 19:20:26,994 INFO    SenderThread:108188 [sender.py:transition_state():316] send defer: 5
+2021-10-04 19:20:26,994 DEBUG   SenderThread:108188 [sender.py:send_request():196] send_request: poll_exit
+2021-10-04 19:20:26,995 DEBUG   HandlerThread:108188 [handler.py:handle_request():128] handle_request: defer
+2021-10-04 19:20:26,996 INFO    HandlerThread:108188 [handler.py:handle_request_defer():145] handle defer: 5
+2021-10-04 19:20:26,996 DEBUG   SenderThread:108188 [sender.py:send_request():196] send_request: defer
+2021-10-04 19:20:26,996 INFO    SenderThread:108188 [sender.py:send_request_defer():312] handle sender defer: 5
+2021-10-04 19:20:26,996 INFO    SenderThread:108188 [dir_watcher.py:finish():282] shutting down directory watcher
+2021-10-04 19:20:27,098 DEBUG   HandlerThread:108188 [handler.py:handle_request():128] handle_request: poll_exit
+2021-10-04 19:20:27,756 INFO    Thread-8  :108188 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/config.yaml
+2021-10-04 19:20:27,757 INFO    SenderThread:108188 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/wandb-summary.json
+2021-10-04 19:20:27,758 INFO    SenderThread:108188 [dir_watcher.py:finish():312] scan: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files
+2021-10-04 19:20:27,758 INFO    SenderThread:108188 [dir_watcher.py:finish():318] scan save: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/requirements.txt requirements.txt
+2021-10-04 19:20:27,759 INFO    SenderThread:108188 [dir_watcher.py:finish():318] scan save: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/wandb-summary.json wandb-summary.json
+2021-10-04 19:20:27,759 INFO    SenderThread:108188 [dir_watcher.py:finish():318] scan save: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/config.yaml config.yaml
+2021-10-04 19:20:27,760 INFO    SenderThread:108188 [dir_watcher.py:finish():318] scan save: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/wandb-metadata.json wandb-metadata.json
+2021-10-04 19:20:27,760 INFO    SenderThread:108188 [dir_watcher.py:finish():318] scan save: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/output.log output.log
+2021-10-04 19:20:27,766 INFO    SenderThread:108188 [sender.py:transition_state():316] send defer: 6
+2021-10-04 19:20:27,767 DEBUG   SenderThread:108188 [sender.py:send_request():196] send_request: poll_exit
+2021-10-04 19:20:27,774 DEBUG   HandlerThread:108188 [handler.py:handle_request():128] handle_request: defer
+2021-10-04 19:20:27,774 INFO    HandlerThread:108188 [handler.py:handle_request_defer():145] handle defer: 6
+2021-10-04 19:20:27,776 DEBUG   SenderThread:108188 [sender.py:send_request():196] send_request: defer
+2021-10-04 19:20:27,776 INFO    SenderThread:108188 [sender.py:send_request_defer():312] handle sender defer: 6
+2021-10-04 19:20:27,776 INFO    SenderThread:108188 [file_pusher.py:finish():177] shutting down file pusher
+2021-10-04 19:20:27,870 DEBUG   HandlerThread:108188 [handler.py:handle_request():128] handle_request: poll_exit
+2021-10-04 19:20:27,870 DEBUG   SenderThread:108188 [sender.py:send_request():196] send_request: poll_exit
+2021-10-04 19:20:27,971 DEBUG   HandlerThread:108188 [handler.py:handle_request():128] handle_request: poll_exit
+2021-10-04 19:20:27,972 DEBUG   SenderThread:108188 [sender.py:send_request():196] send_request: poll_exit
+2021-10-04 19:20:28,074 DEBUG   HandlerThread:108188 [handler.py:handle_request():128] handle_request: poll_exit
+2021-10-04 19:20:28,074 DEBUG   SenderThread:108188 [sender.py:send_request():196] send_request: poll_exit
+2021-10-04 19:20:28,154 WARNING MainThread:108188 [internal.py:wandb_internal():145] Internal process interrupt: 1
+2021-10-04 19:20:28,329 WARNING MainThread:108188 [internal.py:wandb_internal():145] Internal process interrupt: 2
+2021-10-04 19:20:28,330 ERROR   MainThread:108188 [internal.py:wandb_internal():148] Internal process interrupted.
+2021-10-04 19:20:28,353 INFO    Thread-15 :108188 [upload_job.py:push():137] Uploaded file /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/output.log
+2021-10-04 19:20:28,388 INFO    Thread-13 :108188 [upload_job.py:push():137] Uploaded file /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/wandb-summary.json
+2021-10-04 19:20:28,443 INFO    Thread-12 :108188 [upload_job.py:push():137] Uploaded file /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/requirements.txt
+2021-10-04 19:20:28,760 INFO    Thread-14 :108188 [upload_job.py:push():137] Uploaded file /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/files/config.yaml
+2021-10-04 19:20:28,767 INFO    WriterThread:108188 [datastore.py:close():281] close: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_192011-mzgbrdz9/run-mzgbrdz9.wandb
+2021-10-04 19:20:28,961 INFO    Thread-7  :108188 [sender.py:transition_state():316] send defer: 7
+2021-10-04 19:20:29,074 INFO    SenderThread:108188 [sender.py:finish():979] shutting down sender
+2021-10-04 19:20:29,075 INFO    SenderThread:108188 [file_pusher.py:finish():177] shutting down file pusher
+2021-10-04 19:20:29,075 INFO    SenderThread:108188 [file_pusher.py:join():182] waiting for file pusher
+2021-10-04 19:20:29,211 INFO    MainThread:108188 [internal.py:handle_exit():76] Internal process exited

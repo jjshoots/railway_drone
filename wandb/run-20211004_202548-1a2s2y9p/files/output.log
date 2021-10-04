@@ -1,0 +1,108 @@
+
+No weights directory for weights/Version_8, generating new one in 3 seconds.
+No weights directory for optim_weights/Version_8, generating new one in 3 seconds.
+No weights file found, generating new one during training.
+Epoch 1; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
+b3Warning[examples/SharedMemory/PhysicsServerCommandProcessor.cpp,13972]:
+Unsupported texture image format [models/textures/images/chequered/chequered_0106.jpg]
+b3Warning[examples/SharedMemory/PhysicsServerCommandProcessor.cpp,13972]:
+Unsupported texture image format [models/textures/images/chequered/chequered_0106.jpg]
+Epoch 2; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
+Epoch 3; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
+b3Warning[examples/SharedMemory/PhysicsServerCommandProcessor.cpp,13972]:
+Unsupported texture image format [models/textures/images/chequered/chequered_0118.jpg]
+Epoch 4; Batch Number 0; Running Loss 0.41936; Lowest Running Loss 10.00000
+New lowest point, saving weights to: weights/weights0.pth
+Epoch 5; Batch Number 0; Running Loss 0.52274; Lowest Running Loss 0.41936
+b3Warning[examples/SharedMemory/PhysicsServerCommandProcessor.cpp,13972]:
+Unsupported texture image format [models/textures/images/chequered/chequered_0106.jpg]
+Epoch 6; Batch Number 0; Running Loss 0.39053; Lowest Running Loss 0.41936
+New lowest point, saving weights to: weights/weights1.pth
+Epoch 7; Batch Number 0; Running Loss 0.34021; Lowest Running Loss 0.39053
+New lowest point, saving weights to: weights/weights2.pth
+Epoch 8; Batch Number 0; Running Loss 0.25292; Lowest Running Loss 0.34021
+New lowest point, saving weights to: weights/weights3.pth
+Epoch 9; Batch Number 0; Running Loss 0.20784; Lowest Running Loss 0.25292
+New lowest point, saving weights to: weights/weights4.pth
+Epoch 10; Batch Number 0; Running Loss 0.17472; Lowest Running Loss 0.20784
+New lowest point, saving weights to: weights/weights5.pth
+Epoch 11; Batch Number 0; Running Loss 0.22220; Lowest Running Loss 0.17472
+Epoch 12; Batch Number 0; Running Loss 0.17922; Lowest Running Loss 0.17472
+Epoch 13; Batch Number 0; Running Loss 0.16535; Lowest Running Loss 0.17472
+New lowest point, saving weights to: weights/weights6.pth
+b3Warning[examples/SharedMemory/PhysicsServerCommandProcessor.cpp,13972]:
+Unsupported texture image format [models/textures/images/chequered/chequered_0118.jpg]
+Epoch 14; Batch Number 0; Running Loss 0.15588; Lowest Running Loss 0.16535
+New lowest point, saving weights to: weights/weights7.pth
+Epoch 15; Batch Number 0; Running Loss 0.17169; Lowest Running Loss 0.15588
+Epoch 16; Batch Number 0; Running Loss 0.13554; Lowest Running Loss 0.15588
+New lowest point, saving weights to: weights/weights8.pth
+Epoch 17; Batch Number 0; Running Loss 0.15254; Lowest Running Loss 0.13554
+Epoch 18; Batch Number 0; Running Loss 0.16711; Lowest Running Loss 0.13554
+b3Warning[examples/SharedMemory/PhysicsServerCommandProcessor.cpp,13972]:
+Unsupported texture image format [models/textures/images/chequered/chequered_0106.jpg]
+Epoch 19; Batch Number 0; Running Loss 0.21766; Lowest Running Loss 0.13554
+b3Warning[examples/SharedMemory/PhysicsServerCommandProcessor.cpp,13972]:
+Unsupported texture image format [models/textures/images/chequered/chequered_0106.jpg]
+Epoch 20; Batch Number 0; Running Loss 0.13889; Lowest Running Loss 0.13554
+Epoch 21; Batch Number 0; Running Loss 0.15836; Lowest Running Loss 0.13554
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 22; Batch Number 0; Running Loss 0.14744; Lowest Running Loss 0.13554
+Epoch 23; Batch Number 0; Running Loss 0.16176; Lowest Running Loss 0.13554
+Epoch 24; Batch Number 0; Running Loss 0.12126; Lowest Running Loss 0.13554
+New lowest point, saving weights to: weights/weights9.pth
+Epoch 25; Batch Number 0; Running Loss 0.14360; Lowest Running Loss 0.12126
+Epoch 26; Batch Number 0; Running Loss 0.12887; Lowest Running Loss 0.12126
+Epoch 27; Batch Number 0; Running Loss 0.14057; Lowest Running Loss 0.12126
+Epoch 28; Batch Number 0; Running Loss 0.14823; Lowest Running Loss 0.12126
+Epoch 29; Batch Number 0; Running Loss 0.15724; Lowest Running Loss 0.12126
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 30; Batch Number 0; Running Loss 0.16045; Lowest Running Loss 0.12126
+
+argv[0]=
+Epoch 31; Batch Number 0; Running Loss 0.13624; Lowest Running Loss 0.12126
+b3Warning[examples/SharedMemory/PhysicsServerCommandProcessor.cpp,13972]:
+Unsupported texture image format [models/textures/images/chequered/chequered_0106.jpg]
+Epoch 32; Batch Number 0; Running Loss 0.14292; Lowest Running Loss 0.12126
+Epoch 33; Batch Number 0; Running Loss 0.13366; Lowest Running Loss 0.12126
+Epoch 34; Batch Number 0; Running Loss 0.12632; Lowest Running Loss 0.12126
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 35; Batch Number 0; Running Loss 0.17590; Lowest Running Loss 0.12126
+Epoch 36; Batch Number 0; Running Loss 0.14049; Lowest Running Loss 0.12126
+
+argv[0]=
+Epoch 37; Batch Number 0; Running Loss 0.12474; Lowest Running Loss 0.12126
+Epoch 38; Batch Number 0; Running Loss 0.13475; Lowest Running Loss 0.12126
+Epoch 39; Batch Number 0; Running Loss 0.13595; Lowest Running Loss 0.12126
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 40; Batch Number 0; Running Loss 0.17436; Lowest Running Loss 0.12126
+Epoch 41; Batch Number 0; Running Loss 0.16441; Lowest Running Loss 0.12126
+b3Warning[examples/SharedMemory/PhysicsServerCommandProcessor.cpp,13972]:
+Unsupported texture image format [models/textures/images/chequered/chequered_0106.jpg]
+Epoch 42; Batch Number 0; Running Loss 0.11421; Lowest Running Loss 0.12126
+New lowest point, saving weights to: weights/weights10.pth
+Epoch 43; Batch Number 0; Running Loss 0.16652; Lowest Running Loss 0.11421
+Epoch 44; Batch Number 0; Running Loss 0.13315; Lowest Running Loss 0.11421
+Epoch 45; Batch Number 0; Running Loss 0.13368; Lowest Running Loss 0.11421
+Epoch 46; Batch Number 0; Running Loss 0.15319; Lowest Running Loss 0.11421
+b3Warning[examples/SharedMemory/PhysicsServerCommandProcessor.cpp,13972]:
+Unsupported texture image format [models/textures/images/chequered/chequered_0106.jpg]
+Epoch 47; Batch Number 0; Running Loss 0.13281; Lowest Running Loss 0.11421
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 48; Batch Number 0; Running Loss 0.14462; Lowest Running Loss 0.11421
+Epoch 49; Batch Number 0; Running Loss 0.14197; Lowest Running Loss 0.11421
+Epoch 50; Batch Number 0; Running Loss 0.14426; Lowest Running Loss 0.11421
+Epoch 51; Batch Number 0; Running Loss 0.13459; Lowest Running Loss 0.11421
+Epoch 52; Batch Number 0; Running Loss 0.11955; Lowest Running Loss 0.11421
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 53; Batch Number 0; Running Loss 0.13012; Lowest Running Loss 0.11421
+Epoch 54; Batch Number 0; Running Loss 0.17338; Lowest Running Loss 0.11421
+Epoch 55; Batch Number 0; Running Loss 0.12396; Lowest Running Loss 0.11421
+Epoch 56; Batch Number 0; Running Loss 0.12824; Lowest Running Loss 0.11421
+Epoch 57; Batch Number 0; Running Loss 0.12138; Lowest Running Loss 0.11421
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+b3Warning[examples/SharedMemory/PhysicsServerCommandProcessor.cpp,13972]:
+Unsupported texture image format [models/textures/images/chequered/chequered_0106.jpg]
+Epoch 58; Batch Number 0; Running Loss 0.13378; Lowest Running Loss 0.11421
+Epoch 59; Batch Number 0; Running Loss 0.13052; Lowest Running Loss 0.11421
+ctrl-c invoked

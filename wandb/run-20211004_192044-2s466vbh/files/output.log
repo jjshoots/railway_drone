@@ -1,0 +1,202 @@
+
+No weights directory for weights/Version_7, generating new one in 3 seconds.
+No weights directory for optim_weights/Version_7, generating new one in 3 seconds.
+No weights file found, generating new one during training.
+Epoch 1; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
+Epoch 2; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
+Epoch 3; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
+Epoch 4; Batch Number 0; Running Loss 0.12703; Lowest Running Loss 10.00000
+New lowest point, saving weights to: weights/weights0.pth
+Epoch 5; Batch Number 0; Running Loss 0.24967; Lowest Running Loss 0.12703
+Epoch 6; Batch Number 0; Running Loss 0.30569; Lowest Running Loss 0.12703
+Epoch 7; Batch Number 0; Running Loss 0.32556; Lowest Running Loss 0.12703
+Epoch 8; Batch Number 0; Running Loss 0.38799; Lowest Running Loss 0.12703
+Epoch 9; Batch Number 0; Running Loss 0.49438; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 10; Batch Number 0; Running Loss 0.55709; Lowest Running Loss 0.12703
+Epoch 11; Batch Number 0; Running Loss 0.58445; Lowest Running Loss 0.12703
+Epoch 12; Batch Number 0; Running Loss 0.55804; Lowest Running Loss 0.12703
+Epoch 13; Batch Number 0; Running Loss 0.56659; Lowest Running Loss 0.12703
+Epoch 14; Batch Number 0; Running Loss 0.51613; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 15; Batch Number 0; Running Loss 0.47997; Lowest Running Loss 0.12703
+Epoch 16; Batch Number 0; Running Loss 0.52239; Lowest Running Loss 0.12703
+Epoch 17; Batch Number 0; Running Loss 0.54129; Lowest Running Loss 0.12703
+Epoch 18; Batch Number 0; Running Loss 0.61392; Lowest Running Loss 0.12703
+Epoch 19; Batch Number 0; Running Loss 0.56055; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 20; Batch Number 0; Running Loss 0.59545; Lowest Running Loss 0.12703
+Epoch 21; Batch Number 0; Running Loss 0.58033; Lowest Running Loss 0.12703
+Epoch 22; Batch Number 0; Running Loss 0.41130; Lowest Running Loss 0.12703
+Epoch 23; Batch Number 0; Running Loss 0.38290; Lowest Running Loss 0.12703
+Epoch 24; Batch Number 0; Running Loss 0.39241; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 25; Batch Number 0; Running Loss 0.40688; Lowest Running Loss 0.12703
+Epoch 26; Batch Number 0; Running Loss 0.41062; Lowest Running Loss 0.12703
+Epoch 27; Batch Number 0; Running Loss 0.44298; Lowest Running Loss 0.12703
+Epoch 28; Batch Number 0; Running Loss 0.52935; Lowest Running Loss 0.12703
+Epoch 29; Batch Number 0; Running Loss 0.53188; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 30; Batch Number 0; Running Loss 0.48238; Lowest Running Loss 0.12703
+Epoch 31; Batch Number 0; Running Loss 0.49393; Lowest Running Loss 0.12703
+Epoch 32; Batch Number 0; Running Loss 0.47757; Lowest Running Loss 0.12703
+Epoch 33; Batch Number 0; Running Loss 0.56640; Lowest Running Loss 0.12703
+Epoch 34; Batch Number 0; Running Loss 0.61469; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 35; Batch Number 0; Running Loss 0.54402; Lowest Running Loss 0.12703
+Epoch 36; Batch Number 0; Running Loss 0.52922; Lowest Running Loss 0.12703
+Epoch 37; Batch Number 0; Running Loss 0.55654; Lowest Running Loss 0.12703
+Epoch 38; Batch Number 0; Running Loss 0.59501; Lowest Running Loss 0.12703
+Epoch 39; Batch Number 0; Running Loss 0.56076; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 40; Batch Number 0; Running Loss 0.46500; Lowest Running Loss 0.12703
+Epoch 41; Batch Number 0; Running Loss 0.37757; Lowest Running Loss 0.12703
+Epoch 42; Batch Number 0; Running Loss 0.33643; Lowest Running Loss 0.12703
+Epoch 43; Batch Number 0; Running Loss 0.35829; Lowest Running Loss 0.12703
+Epoch 44; Batch Number 0; Running Loss 0.33082; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 45; Batch Number 0; Running Loss 0.37952; Lowest Running Loss 0.12703
+Epoch 46; Batch Number 0; Running Loss 0.45047; Lowest Running Loss 0.12703
+Epoch 47; Batch Number 0; Running Loss 0.49081; Lowest Running Loss 0.12703
+Epoch 48; Batch Number 0; Running Loss 0.50343; Lowest Running Loss 0.12703
+Epoch 49; Batch Number 0; Running Loss 0.52432; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 50; Batch Number 0; Running Loss 0.45612; Lowest Running Loss 0.12703
+Epoch 51; Batch Number 0; Running Loss 0.45105; Lowest Running Loss 0.12703
+Epoch 52; Batch Number 0; Running Loss 0.49056; Lowest Running Loss 0.12703
+Epoch 53; Batch Number 0; Running Loss 0.51928; Lowest Running Loss 0.12703
+Epoch 54; Batch Number 0; Running Loss 0.50490; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 55; Batch Number 0; Running Loss 0.39098; Lowest Running Loss 0.12703
+Epoch 56; Batch Number 0; Running Loss 0.38655; Lowest Running Loss 0.12703
+Epoch 57; Batch Number 0; Running Loss 0.44094; Lowest Running Loss 0.12703
+Epoch 58; Batch Number 0; Running Loss 0.44673; Lowest Running Loss 0.12703
+Epoch 59; Batch Number 0; Running Loss 0.51153; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 60; Batch Number 0; Running Loss 0.54726; Lowest Running Loss 0.12703
+Epoch 61; Batch Number 0; Running Loss 0.56500; Lowest Running Loss 0.12703
+Epoch 62; Batch Number 0; Running Loss 0.60581; Lowest Running Loss 0.12703
+Epoch 63; Batch Number 0; Running Loss 0.61698; Lowest Running Loss 0.12703
+Epoch 64; Batch Number 0; Running Loss 0.55239; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 65; Batch Number 0; Running Loss 0.47164; Lowest Running Loss 0.12703
+Epoch 66; Batch Number 0; Running Loss 0.43015; Lowest Running Loss 0.12703
+Epoch 67; Batch Number 0; Running Loss 0.42630; Lowest Running Loss 0.12703
+Epoch 68; Batch Number 0; Running Loss 0.49905; Lowest Running Loss 0.12703
+Epoch 69; Batch Number 0; Running Loss 0.51521; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 70; Batch Number 0; Running Loss 0.46479; Lowest Running Loss 0.12703
+Epoch 71; Batch Number 0; Running Loss 0.46653; Lowest Running Loss 0.12703
+Epoch 72; Batch Number 0; Running Loss 0.37043; Lowest Running Loss 0.12703
+Epoch 73; Batch Number 0; Running Loss 0.32969; Lowest Running Loss 0.12703
+Epoch 74; Batch Number 0; Running Loss 0.45239; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 75; Batch Number 0; Running Loss 0.46625; Lowest Running Loss 0.12703
+Epoch 76; Batch Number 0; Running Loss 0.47800; Lowest Running Loss 0.12703
+Epoch 77; Batch Number 0; Running Loss 0.48314; Lowest Running Loss 0.12703
+Epoch 78; Batch Number 0; Running Loss 0.45682; Lowest Running Loss 0.12703
+Epoch 79; Batch Number 0; Running Loss 0.45470; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 80; Batch Number 0; Running Loss 0.41305; Lowest Running Loss 0.12703
+Epoch 81; Batch Number 0; Running Loss 0.48665; Lowest Running Loss 0.12703
+Epoch 82; Batch Number 0; Running Loss 0.48308; Lowest Running Loss 0.12703
+Epoch 83; Batch Number 0; Running Loss 0.56704; Lowest Running Loss 0.12703
+Epoch 84; Batch Number 0; Running Loss 0.57891; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 85; Batch Number 0; Running Loss 0.60659; Lowest Running Loss 0.12703
+Epoch 86; Batch Number 0; Running Loss 0.54089; Lowest Running Loss 0.12703
+Epoch 87; Batch Number 0; Running Loss 0.51523; Lowest Running Loss 0.12703
+Epoch 88; Batch Number 0; Running Loss 0.52994; Lowest Running Loss 0.12703
+Epoch 89; Batch Number 0; Running Loss 0.54925; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 90; Batch Number 0; Running Loss 0.62227; Lowest Running Loss 0.12703
+Epoch 91; Batch Number 0; Running Loss 0.64904; Lowest Running Loss 0.12703
+Epoch 92; Batch Number 0; Running Loss 0.69202; Lowest Running Loss 0.12703
+Epoch 93; Batch Number 0; Running Loss 0.60692; Lowest Running Loss 0.12703
+Epoch 94; Batch Number 0; Running Loss 0.48820; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 95; Batch Number 0; Running Loss 0.46439; Lowest Running Loss 0.12703
+Epoch 96; Batch Number 0; Running Loss 0.42877; Lowest Running Loss 0.12703
+Epoch 97; Batch Number 0; Running Loss 0.47462; Lowest Running Loss 0.12703
+Epoch 98; Batch Number 0; Running Loss 0.55915; Lowest Running Loss 0.12703
+Epoch 99; Batch Number 0; Running Loss 0.60306; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 100; Batch Number 0; Running Loss 0.62968; Lowest Running Loss 0.12703
+Epoch 101; Batch Number 0; Running Loss 0.55864; Lowest Running Loss 0.12703
+Epoch 102; Batch Number 0; Running Loss 0.56780; Lowest Running Loss 0.12703
+Epoch 103; Batch Number 0; Running Loss 0.54852; Lowest Running Loss 0.12703
+Epoch 104; Batch Number 0; Running Loss 0.48240; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 105; Batch Number 0; Running Loss 0.41914; Lowest Running Loss 0.12703
+Epoch 106; Batch Number 0; Running Loss 0.40500; Lowest Running Loss 0.12703
+Epoch 107; Batch Number 0; Running Loss 0.38070; Lowest Running Loss 0.12703
+Epoch 108; Batch Number 0; Running Loss 0.43467; Lowest Running Loss 0.12703
+Epoch 109; Batch Number 0; Running Loss 0.47355; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 110; Batch Number 0; Running Loss 0.47884; Lowest Running Loss 0.12703
+Epoch 111; Batch Number 0; Running Loss 0.52759; Lowest Running Loss 0.12703
+Epoch 112; Batch Number 0; Running Loss 0.55577; Lowest Running Loss 0.12703
+Epoch 113; Batch Number 0; Running Loss 0.46735; Lowest Running Loss 0.12703
+Epoch 114; Batch Number 0; Running Loss 0.51441; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 115; Batch Number 0; Running Loss 0.51920; Lowest Running Loss 0.12703
+Epoch 116; Batch Number 0; Running Loss 0.53653; Lowest Running Loss 0.12703
+Epoch 117; Batch Number 0; Running Loss 0.53598; Lowest Running Loss 0.12703
+Epoch 118; Batch Number 0; Running Loss 0.55184; Lowest Running Loss 0.12703
+Epoch 119; Batch Number 0; Running Loss 0.51644; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 120; Batch Number 0; Running Loss 0.46274; Lowest Running Loss 0.12703
+Epoch 121; Batch Number 0; Running Loss 0.52209; Lowest Running Loss 0.12703
+Epoch 122; Batch Number 0; Running Loss 0.51217; Lowest Running Loss 0.12703
+Epoch 123; Batch Number 0; Running Loss 0.46699; Lowest Running Loss 0.12703
+Epoch 124; Batch Number 0; Running Loss 0.50856; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 125; Batch Number 0; Running Loss 0.51332; Lowest Running Loss 0.12703
+Epoch 126; Batch Number 0; Running Loss 0.44789; Lowest Running Loss 0.12703
+Epoch 127; Batch Number 0; Running Loss 0.43620; Lowest Running Loss 0.12703
+Epoch 128; Batch Number 0; Running Loss 0.35730; Lowest Running Loss 0.12703
+Epoch 129; Batch Number 0; Running Loss 0.39935; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 130; Batch Number 0; Running Loss 0.45437; Lowest Running Loss 0.12703
+Epoch 131; Batch Number 0; Running Loss 0.60040; Lowest Running Loss 0.12703
+Epoch 132; Batch Number 0; Running Loss 0.73628; Lowest Running Loss 0.12703
+Epoch 133; Batch Number 0; Running Loss 0.59431; Lowest Running Loss 0.12703
+Epoch 134; Batch Number 0; Running Loss 0.57770; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 135; Batch Number 0; Running Loss 0.57113; Lowest Running Loss 0.12703
+Epoch 136; Batch Number 0; Running Loss 0.56174; Lowest Running Loss 0.12703
+Epoch 137; Batch Number 0; Running Loss 0.46395; Lowest Running Loss 0.12703
+Epoch 138; Batch Number 0; Running Loss 0.46949; Lowest Running Loss 0.12703
+Epoch 139; Batch Number 0; Running Loss 0.45874; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 140; Batch Number 0; Running Loss 0.48771; Lowest Running Loss 0.12703
+Epoch 141; Batch Number 0; Running Loss 0.49834; Lowest Running Loss 0.12703
+Epoch 142; Batch Number 0; Running Loss 0.45705; Lowest Running Loss 0.12703
+Epoch 143; Batch Number 0; Running Loss 0.45846; Lowest Running Loss 0.12703
+Epoch 144; Batch Number 0; Running Loss 0.46517; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 145; Batch Number 0; Running Loss 0.47239; Lowest Running Loss 0.12703
+Epoch 146; Batch Number 0; Running Loss 0.47498; Lowest Running Loss 0.12703
+Epoch 147; Batch Number 0; Running Loss 0.49858; Lowest Running Loss 0.12703
+Epoch 148; Batch Number 0; Running Loss 0.51996; Lowest Running Loss 0.12703
+Epoch 149; Batch Number 0; Running Loss 0.51964; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 150; Batch Number 0; Running Loss 0.56942; Lowest Running Loss 0.12703
+Epoch 151; Batch Number 0; Running Loss 0.53347; Lowest Running Loss 0.12703
+Epoch 152; Batch Number 0; Running Loss 0.47379; Lowest Running Loss 0.12703
+Epoch 153; Batch Number 0; Running Loss 0.43804; Lowest Running Loss 0.12703
+Epoch 154; Batch Number 0; Running Loss 0.38649; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 155; Batch Number 0; Running Loss 0.48249; Lowest Running Loss 0.12703
+Epoch 156; Batch Number 0; Running Loss 0.47348; Lowest Running Loss 0.12703
+Epoch 157; Batch Number 0; Running Loss 0.50504; Lowest Running Loss 0.12703
+Epoch 158; Batch Number 0; Running Loss 0.54329; Lowest Running Loss 0.12703
+Epoch 159; Batch Number 0; Running Loss 0.52548; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 160; Batch Number 0; Running Loss 0.53544; Lowest Running Loss 0.12703
+Epoch 161; Batch Number 0; Running Loss 0.53480; Lowest Running Loss 0.12703
+Epoch 162; Batch Number 0; Running Loss 0.48081; Lowest Running Loss 0.12703
+Epoch 163; Batch Number 0; Running Loss 0.43114; Lowest Running Loss 0.12703
+Epoch 164; Batch Number 0; Running Loss 0.48492; Lowest Running Loss 0.12703
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 165; Batch Number 0; Running Loss 0.49109; Lowest Running Loss 0.12703

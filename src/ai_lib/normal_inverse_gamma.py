@@ -29,6 +29,19 @@ def NormalInvGamma(gamma, nu, alpha, beta):
     return D.Normal(mu, sigma_sq)
 
 
+def ShrunkenNormalInvGamma(gamma, nu, alpha, beta):
+    """
+    Normal Inverse Gamma Distribution
+    """
+    assert torch.all(nu > 0.), 'nu must be more than zero'
+    assert torch.all(alpha > 1.), 'alpha must be more than one'
+    assert torch.all(beta > 0.), 'beta must be more than zero'
+
+    var = beta / (nu * (alpha - 1))
+
+    return D.Normal(gamma, var)
+
+
 def NIG_uncertainty(alpha, beta):
     """
     calculates the aleotoric uncertainty of a distribution
@@ -40,7 +53,7 @@ def NIG_uncertainty(alpha, beta):
     return beta / (alpha - 1)
 
 
-def NIG_NLL(label, gamma, nu, alpha, beta):
+def NIG_NLL(label, gamma, nu, alpha, beta, reduce=True):
     """
     Negative Log Likelihood loss between label and predicted output
     """
@@ -52,11 +65,12 @@ def NIG_NLL(label, gamma, nu, alpha, beta):
         + torch.lgamma(alpha) \
         - torch.lgamma(alpha + 0.5)
 
-    return torch.mean(nll)
+    return torch.mean(nll) if reduce else nll
 
 
-def NIG_reg(label, gamma, nu, alpha, beta):
+def NIG_reg(label, gamma, nu, alpha, beta, reduce=True):
     """
     Regularizer for for NIG distribution, scale the output of this by ~0.01
     """
-    return torch.mean(torch.abs(gamma - label) * (2*nu + alpha))
+    loss = torch.abs(gamma - label) * (2*nu + alpha)
+    return torch.mean(loss) if reduce else loss

@@ -14,11 +14,10 @@ import torch
 import torch.nn.functional as F
 
 from utility.shebangs import *
-from utility.live_plot import *
 
 from env.environment import *
 
-from ai_lib.replay_buffer_simple import *
+from ai_lib.replay_buffer import *
 from ai_lib.normal_inverse_gamma import *
 from ai_lib.trackNet import *
 
@@ -26,24 +25,24 @@ from ai_lib.trackNet import *
 def train(set):
     net, net_helper, net_optim, net_optim_helper, net_sched = setup_nets(set)
     envs = setup_envs(set)
-    memory = ReplayBufferSimple(set.buffer_size)
+    memory = ReplayBuffer(set.buffer_size)
 
     stacked_obs = torch.zeros(set.num_envs, 3, *envs[0].env.drone.frame_size).to(set.device)
     dones = np.zeros((set.num_envs, 1))
     targets = np.zeros((set.num_envs, 2))
-    actions = np.zeros((set.num_envs, 2))
+    target = np.zeros((set.num_envs, 2))
 
     for epoch in range(set.start_epoch, set.epochs):
         # gather the data
         memory.counter = 0
-        while not memory.is_full():
+        while not memory.is_full:
             for i, env in enumerate(envs):
-                obs, _, dne, tgt = env.step(actions[i])
+                obs, _, _, dne, tgt = env.step(target[i])
 
                 if not dne:
                     # ommit saving alpha channel of image and flip to pytorch aligned axis
                     obs = (obs[..., :-1].transpose(2, 0, 1) - 127.5) / 255.
-                    memory.push(obs, tgt)
+                    memory.push([obs, tgt])
 
                     stacked_obs[i] = torch.tensor(obs).float()
                     dones[i] = dne
@@ -52,10 +51,10 @@ def train(set):
                     env.reset()
 
             if epoch < 5:
-                actions = targets * dones
+                target = targets * dones
             else:
-                actions = net.forward(stacked_obs)[0].squeeze(0).detach().cpu().numpy()
-                actions = actions * dones
+                target = net.forward(stacked_obs)[0].squeeze(0).detach().cpu().numpy()
+                target = target * dones
 
         dataloader = torch.utils.data.DataLoader(memory, batch_size=set.batch_size, shuffle=True, drop_last=False)
 
@@ -111,23 +110,22 @@ def display(set):
 
     while True:
         for i, env in enumerate(envs):
-            obs, _, done, info = env.step(target[i])
+            obs, _, _, done, info = env.step(target[i])
 
             stack_obs[i] = obs
 
-            if True:
-                if env.new_obs:
-                    obs = (obs[..., :-1].transpose(2, 0, 1) - 127.5) / 255.
-                    obs = torch.tensor(obs).unsqueeze(0).to(set.device).type(torch.float32)
+            if False:
+                obs = (obs[..., :-1].transpose(2, 0, 1) - 127.5) / 255.
+                obs = torch.tensor(obs).unsqueeze(0).to(set.device).type(torch.float32)
 
-                    output = net.forward(obs)
-                    target[i] = output[0].squeeze(0).detach().cpu().numpy()
-                    uncertainty[i] = torch.mean(NIG_uncertainty(output[-2], output[-1])).squeeze(0).detach().cpu().numpy()
+                output = net.forward(obs)
+                # target[i] = NormalInvGamma(*output).sample().squeeze().detach().cpu().numpy()
+                target[i] = output[0].squeeze(0).detach().cpu().numpy()
+                uncertainty[i] = torch.mean(NIG_uncertainty(output[-2], output[-1])).squeeze(0).detach().cpu().numpy()
 
-                    print(uncertainty[i])
+                print(uncertainty[i])
             else:
                 target[i] = info
-
 
             if done:
                 env.reset()
@@ -156,13 +154,13 @@ def setup_envs(set):
 
 
 def setup_nets(set):
-    net_helper = helpers(mark_number=set.tracknet_number,
+    net_helper = Logger(mark_number=set.tracknet_number,
                          version_number=set.tracknet_version,
                          weights_location=set.weights_directory,
                          epoch_interval=set.epoch_interval,
                          batch_interval=set.batch_interval,
                          )
-    net_optim_helper = helpers(mark_number=0,
+    net_optim_helper = Logger(mark_number=0,
                                version_number=set.tracknet_version,
                                weights_location=set.optim_weights_directory,
                                epoch_interval=set.epoch_interval,

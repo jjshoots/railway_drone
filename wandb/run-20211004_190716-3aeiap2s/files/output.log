@@ -1,0 +1,28 @@
+
+No weights file found, generating new one during training.
+[W python_anomaly_mode.cpp:104] Warning: Error detected in MulBackward0. Traceback of forward call that caused the error:
+  File "src/mainSAC.py", line 261, in <module>
+    train(set)
+  File "src/mainSAC.py", line 122, in train
+    + (((1. - sup_scale) / sup_norm) * rnf_loss).mean() \
+ (function _print_stack)
+Traceback (most recent call last):
+  File "src/mainSAC.py", line 261, in <module>
+    train(set)
+  File "src/mainSAC.py", line 126, in train
+    total_loss.backward()
+  File "/home/jet/.local/lib/python3.8/site-packages/torch/tensor.py", line 245, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/jet/.local/lib/python3.8/site-packages/torch/autograd/__init__.py", line 145, in backward
+    Variable._execution_engine.run_backward(
+RuntimeError: Function 'MulBackward0' returned nan values in its 1th output.
+Traceback (most recent call last):
+  File "src/mainSAC.py", line 261, in <module>
+    train(set)
+  File "src/mainSAC.py", line 126, in train
+    total_loss.backward()
+  File "/home/jet/.local/lib/python3.8/site-packages/torch/tensor.py", line 245, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/jet/.local/lib/python3.8/site-packages/torch/autograd/__init__.py", line 145, in backward
+    Variable._execution_engine.run_backward(
+RuntimeError: Function 'MulBackward0' returned nan values in its 1th output.

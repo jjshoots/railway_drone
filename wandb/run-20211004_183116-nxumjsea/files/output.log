@@ -1,0 +1,5 @@
+Using weights file: /weights/Version_7/weights0.pth
+Using weights file: /optim_weights/Version_7/weights0.pth
+Lowest Running Loss for trackNet: 0.0997063809055626 @ epoch 6
+
+argv[0]=

@@ -1,0 +1,36 @@
+2021-10-04 17:54:54,669 INFO    MainThread:79063 [internal.py:wandb_internal():86] W&B internal server running at pid: 79063, started at: 2021-10-04 17:54:54.669291
+2021-10-04 17:54:54,671 DEBUG   HandlerThread:79063 [handler.py:handle_request():128] handle_request: check_version
+2021-10-04 17:54:54,671 INFO    WriterThread:79063 [datastore.py:open_for_write():77] open: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_175454-1funs636/run-1funs636.wandb
+2021-10-04 17:54:54,672 DEBUG   SenderThread:79063 [sender.py:send():182] send: header
+2021-10-04 17:54:54,672 DEBUG   SenderThread:79063 [sender.py:send_request():196] send_request: check_version
+2021-10-04 17:54:54,751 DEBUG   SenderThread:79063 [sender.py:send():182] send: run
+2021-10-04 17:54:55,243 INFO    SenderThread:79063 [dir_watcher.py:__init__():168] watching files in: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_175454-1funs636/files
+2021-10-04 17:54:55,243 INFO    SenderThread:79063 [sender.py:_start_run_threads():740] run started: 1funs636 with start time 1633366494
+2021-10-04 17:54:55,243 DEBUG   SenderThread:79063 [sender.py:send():182] send: summary
+2021-10-04 17:54:55,244 INFO    SenderThread:79063 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 17:54:55,245 DEBUG   HandlerThread:79063 [handler.py:handle_request():128] handle_request: run_start
+2021-10-04 17:54:56,152 DEBUG   HandlerThread:79063 [meta.py:__init__():39] meta init
+2021-10-04 17:54:56,152 DEBUG   HandlerThread:79063 [meta.py:__init__():53] meta init done
+2021-10-04 17:54:56,152 DEBUG   HandlerThread:79063 [meta.py:probe():210] probe
+2021-10-04 17:54:56,158 DEBUG   HandlerThread:79063 [meta.py:_setup_git():200] setup git
+2021-10-04 17:54:56,177 DEBUG   HandlerThread:79063 [meta.py:_setup_git():207] setup git done
+2021-10-04 17:54:56,178 DEBUG   HandlerThread:79063 [meta.py:_save_pip():57] save pip
+2021-10-04 17:54:56,178 DEBUG   HandlerThread:79063 [meta.py:_save_pip():71] save pip done
+2021-10-04 17:54:56,178 DEBUG   HandlerThread:79063 [meta.py:probe():252] probe done
+2021-10-04 17:54:56,180 DEBUG   SenderThread:79063 [sender.py:send():182] send: files
+2021-10-04 17:54:56,181 INFO    SenderThread:79063 [sender.py:_save_file():873] saving file wandb-metadata.json with policy now
+2021-10-04 17:54:56,185 DEBUG   HandlerThread:79063 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 17:54:56,185 DEBUG   SenderThread:79063 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 17:54:56,249 INFO    Thread-8  :79063 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_175454-1funs636/files/output.log
+2021-10-04 17:54:56,250 INFO    Thread-8  :79063 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_175454-1funs636/files/wandb-summary.json
+2021-10-04 17:54:56,250 INFO    Thread-8  :79063 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_175454-1funs636/files/requirements.txt
+2021-10-04 17:54:56,251 INFO    Thread-8  :79063 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_175454-1funs636/files/wandb-metadata.json
+2021-10-04 17:54:56,783 INFO    Thread-11 :79063 [upload_job.py:push():137] Uploaded file /tmp/tmp5pr4l3wtwandb/gjdhnwsi-wandb-metadata.json
+2021-10-04 17:54:58,246 INFO    Thread-8  :79063 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_175454-1funs636/files/output.log
+2021-10-04 17:55:00,246 INFO    Thread-8  :79063 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_175454-1funs636/files/output.log
+2021-10-04 17:55:06,247 INFO    Thread-8  :79063 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_175454-1funs636/files/output.log
+2021-10-04 17:55:08,692 WARNING MainThread:79063 [internal.py:wandb_internal():145] Internal process interrupt: 1
+2021-10-04 17:55:08,887 WARNING MainThread:79063 [internal.py:wandb_internal():145] Internal process interrupt: 2
+2021-10-04 17:55:08,887 ERROR   MainThread:79063 [internal.py:wandb_internal():148] Internal process interrupted.
+2021-10-04 17:55:09,211 INFO    WriterThread:79063 [datastore.py:close():281] close: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_175454-1funs636/run-1funs636.wandb
+2021-10-04 17:55:09,235 INFO    MainThread:79063 [internal.py:handle_exit():76] Internal process exited

@@ -21,7 +21,6 @@ class Environment():
         self.texture_paths = glob.glob(os.path.join(tex_dir, '**', '*.jpg'), recursive=True)
 
         self.render = num_envs == 1
-        self.new_obs = False
 
         self.reset()
 
@@ -47,44 +46,61 @@ class Environment():
             self.env.step()
             self.env.drone.setpoint = np.array([0, 0, 0, 2])
 
+        # track state is dist, angle
+        # drone state is xy velocity
         self.track_state = self.env.track_state()
+        self.drone_state = self.env.drone.state[-2][:2]
 
 
     def get_state(self):
-        return self.env.drone.rgbImg, 0., 0., self.track_state
+        return self.env.drone.rgbImg, self.drone_state, 0., 0., self.track_state
 
 
-    def step(self, action):
+    def step(self, target):
         """
         step the entire simulation
             input is the railstate as [pos, orn]
             output is tuple of observation(ndarray), reward(scalar), done(int), trackstate([pos, orn])
         """
-        # reward is computed for the previous time step
-        reward = -np.linalg.norm(action - self.track_state)
+        reward = 0.
+        done = 0.
+        while not self.env.step():
+            # reward is computed for the previous time step
+            reward = -np.linalg.norm(self.track_state)
 
-        # step the env
-        if self.env.step():
-            self.env.drone.setpoint = self.env.flight_target(action)
-            self.new_obs = True
-        else:
-            self.new_obs = False
-        self.step_count += 1
+            # step the env
+            self.env.drone.setpoint = self.tgt2set(target * self.env.track_state_norm)
+            self.step_count += 1
 
-        # every 240 time steps (1 seconds), change the texture of the floor
-        if self.step_count % 240 == 1:
-            self.update_textures()
+            # every 240 time steps (1 seconds), change the texture of the floor
+            if self.step_count % 240 == 1:
+                self.update_textures()
 
-        # get the new track_state
-        self.track_state = self.env.track_state()
+            # get the states
+            self.track_state = self.env.track_state()
+            self.drone_state = self.env.drone.state[-2][:2]
 
-        # check terminate
-        done = 1. if self.step_count >= self.max_steps else 0.
-        if np.isnan(np.sum(self.track_state)):
-            done = 1.
-            reward = -100
+            # check terminate
+            done = 1. if self.step_count >= self.max_steps else 0.
+            if np.isnan(np.sum(self.track_state)):
+                done = 1.
+                self.track_state = np.array([0., 0.])
 
-        return self.env.drone.rgbImg, reward, done, self.track_state
+        return self.env.drone.rgbImg, self.drone_state, reward, done, self.track_state
+
+
+    def tgt2set(self, track_state: np.ndarray) -> np.ndarray:
+        gain = 2.
+
+        c = np.cos(track_state[1])
+        s = np.sin(track_state[1])
+        rot = (np.array([[c, -s], [s, c]]))
+
+        setpoint = np.matmul(rot, np.array([[-gain * track_state[0]], [6.]])).flatten()
+
+        setpoint = np.array([*setpoint, gain * track_state[1], 2.])
+
+        return setpoint
 
 
     def update_textures(self):
@@ -134,8 +150,6 @@ class Environment():
 
             tex_id = self.get_random_texture()
             self.env.changeVisualShape(self.env.planeId, -1, textureUniqueId=tex_id)
-
-
 
 
     def get_random_texture(self) -> int:

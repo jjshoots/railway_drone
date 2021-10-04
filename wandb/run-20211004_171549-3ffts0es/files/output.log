@@ -1,0 +1,19 @@
+
+No weights directory for weights/Version_7, generating new one in 3 seconds.
+No weights directory for optim_weights/Version_7, generating new one in 3 seconds.
+No weights file found, generating new one during training.
+Epoch 1; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
+Epoch 2; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
+Epoch 3; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
+Epoch 4; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
+Exception ignored in: <module 'threading' from '/usr/lib/python3.8/threading.py'>
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 1355, in _shutdown
+    def _shutdown():
+  File "/home/jet/Sandboxes/railway_drone/src/utility/shebangs.py", line 11, in shutdown_handler
+    exit(0)
+  File "/usr/lib/python3.8/_sitebuiltins.py", line 26, in __call__
+    raise SystemExit(code)
+SystemExit: 0
+ctrl-c invoked
+ctrl-c invoked

@@ -1,26 +1,28 @@
 # settings.yaml file
 
 # number of environments to run in parallel
-num_envs: 30
+num_envs: 10
 # maximum steps per environment
 max_steps: 2000
 
 # training params
-buffer_size: 40000
+buffer_size: 20000
 buffer_size_debug: 100
-batch_size: 700
+batch_size: 300
 start_epoch: 0
-epochs: 300
-repeats_per_buffer: 5
+epochs: 10000
+pretrain_epochs: 3
+transitions_per_epoch: 3000
+repeats_per_buffer: 2
 scheduler_steps: 5
 scheduler_gamma: 0.5
-starting_LR: 0.0003
+starting_LR: 0.001
 reg_lambda: 0.01
 
 # helper params
 weights_directory: "weights"
 optim_weights_directory: "optim_weights"
-tracknet_version: "_5"
+tracknet_version: "_8"
 tracknet_number: 0
-epoch_interval: -1
-batch_interval: 20
+epoch_interval: 1
+batch_interval: -1

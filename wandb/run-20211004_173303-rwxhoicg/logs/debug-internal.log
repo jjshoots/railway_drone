@@ -1,0 +1,52 @@
+2021-10-04 17:33:03,563 INFO    MainThread:72250 [internal.py:wandb_internal():86] W&B internal server running at pid: 72250, started at: 2021-10-04 17:33:03.563234
+2021-10-04 17:33:03,564 INFO    WriterThread:72250 [datastore.py:open_for_write():77] open: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_173303-rwxhoicg/run-rwxhoicg.wandb
+2021-10-04 17:33:03,565 DEBUG   HandlerThread:72250 [handler.py:handle_request():128] handle_request: check_version
+2021-10-04 17:33:03,566 DEBUG   SenderThread:72250 [sender.py:send():182] send: header
+2021-10-04 17:33:03,566 DEBUG   SenderThread:72250 [sender.py:send_request():196] send_request: check_version
+2021-10-04 17:33:03,687 DEBUG   SenderThread:72250 [sender.py:send():182] send: run
+2021-10-04 17:33:03,947 INFO    SenderThread:72250 [dir_watcher.py:__init__():168] watching files in: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_173303-rwxhoicg/files
+2021-10-04 17:33:03,947 INFO    SenderThread:72250 [sender.py:_start_run_threads():740] run started: rwxhoicg with start time 1633365183
+2021-10-04 17:33:03,948 DEBUG   SenderThread:72250 [sender.py:send():182] send: summary
+2021-10-04 17:33:03,949 INFO    SenderThread:72250 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 17:33:03,951 DEBUG   HandlerThread:72250 [handler.py:handle_request():128] handle_request: run_start
+2021-10-04 17:33:04,755 DEBUG   HandlerThread:72250 [meta.py:__init__():39] meta init
+2021-10-04 17:33:04,755 DEBUG   HandlerThread:72250 [meta.py:__init__():53] meta init done
+2021-10-04 17:33:04,755 DEBUG   HandlerThread:72250 [meta.py:probe():210] probe
+2021-10-04 17:33:04,761 DEBUG   HandlerThread:72250 [meta.py:_setup_git():200] setup git
+2021-10-04 17:33:04,778 DEBUG   HandlerThread:72250 [meta.py:_setup_git():207] setup git done
+2021-10-04 17:33:04,779 DEBUG   HandlerThread:72250 [meta.py:_save_pip():57] save pip
+2021-10-04 17:33:04,779 DEBUG   HandlerThread:72250 [meta.py:_save_pip():71] save pip done
+2021-10-04 17:33:04,779 DEBUG   HandlerThread:72250 [meta.py:probe():252] probe done
+2021-10-04 17:33:04,781 DEBUG   SenderThread:72250 [sender.py:send():182] send: files
+2021-10-04 17:33:04,782 INFO    SenderThread:72250 [sender.py:_save_file():873] saving file wandb-metadata.json with policy now
+2021-10-04 17:33:04,785 DEBUG   HandlerThread:72250 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 17:33:04,786 DEBUG   SenderThread:72250 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 17:33:04,948 INFO    Thread-8  :72250 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_173303-rwxhoicg/files/wandb-metadata.json
+2021-10-04 17:33:04,948 INFO    Thread-8  :72250 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_173303-rwxhoicg/files/requirements.txt
+2021-10-04 17:33:04,949 INFO    Thread-8  :72250 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_173303-rwxhoicg/files/wandb-summary.json
+2021-10-04 17:33:04,949 INFO    Thread-8  :72250 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_173303-rwxhoicg/files/output.log
+2021-10-04 17:33:05,367 INFO    Thread-11 :72250 [upload_job.py:push():137] Uploaded file /tmp/tmpgukaso1awandb/va5ng528-wandb-metadata.json
+2021-10-04 17:33:06,947 INFO    Thread-8  :72250 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_173303-rwxhoicg/files/output.log
+2021-10-04 17:33:08,947 INFO    Thread-8  :72250 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_173303-rwxhoicg/files/output.log
+2021-10-04 17:33:09,679 DEBUG   SenderThread:72250 [sender.py:send():182] send: history
+2021-10-04 17:33:09,680 DEBUG   SenderThread:72250 [sender.py:send():182] send: summary
+2021-10-04 17:33:09,680 INFO    SenderThread:72250 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 17:33:09,847 DEBUG   SenderThread:72250 [sender.py:send():182] send: history
+2021-10-04 17:33:09,847 DEBUG   SenderThread:72250 [sender.py:send():182] send: summary
+2021-10-04 17:33:09,848 INFO    SenderThread:72250 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 17:33:09,948 INFO    Thread-8  :72250 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_173303-rwxhoicg/files/wandb-summary.json
+2021-10-04 17:33:10,005 DEBUG   SenderThread:72250 [sender.py:send():182] send: history
+2021-10-04 17:33:10,005 DEBUG   SenderThread:72250 [sender.py:send():182] send: summary
+2021-10-04 17:33:10,005 INFO    SenderThread:72250 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 17:33:10,167 DEBUG   SenderThread:72250 [sender.py:send():182] send: history
+2021-10-04 17:33:10,167 DEBUG   SenderThread:72250 [sender.py:send():182] send: summary
+2021-10-04 17:33:10,167 INFO    SenderThread:72250 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 17:33:10,331 DEBUG   SenderThread:72250 [sender.py:send():182] send: history
+2021-10-04 17:33:10,331 DEBUG   SenderThread:72250 [sender.py:send():182] send: summary
+2021-10-04 17:33:10,331 INFO    SenderThread:72250 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 17:33:10,948 INFO    Thread-8  :72250 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_173303-rwxhoicg/files/wandb-summary.json
+2021-10-04 17:33:10,948 INFO    Thread-8  :72250 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_173303-rwxhoicg/files/output.log
+2021-10-04 17:33:11,782 WARNING MainThread:72250 [internal.py:wandb_internal():145] Internal process interrupt: 1
+2021-10-04 17:33:11,972 WARNING MainThread:72250 [internal.py:wandb_internal():145] Internal process interrupt: 2
+2021-10-04 17:33:11,972 ERROR   MainThread:72250 [internal.py:wandb_internal():148] Internal process interrupted.
+2021-10-04 17:33:12,286 INFO    MainThread:72250 [internal.py:handle_exit():76] Internal process exited

@@ -31,6 +31,8 @@ class Aviary(bullet_client.BulletClient):
         self.render = render
         self.reset()
 
+        self.track_state_norm = np.array([6., 1.])
+
 
     def reset(self):
         self.resetSimulation()
@@ -67,7 +69,7 @@ class Aviary(bullet_client.BulletClient):
 
         # grass meshes
         self.clutter_mesh = np.ones(3)
-        self.clutter_mesh *= obj_visual(self, self.plants_dir + 'clutter_large.obj')
+        self.clutter_mesh *= obj_visual(self, self.plants_dir + 'empty.obj')
 
 
     def step(self):
@@ -110,6 +112,8 @@ class Aviary(bullet_client.BulletClient):
             # render camera image
             self.drone.capture_image()
             return True
+        else:
+            return False
 
 
     def track_state(self) -> np.ndarray:
@@ -129,20 +133,10 @@ class Aviary(bullet_client.BulletClient):
             # plt.show()
             # exit()
 
-            return np.array([pos, orn])
+            # normalize
+            state = np.array([pos, orn]) / self.track_state_norm
+            return np.clip(state, -0.99999, 0.99999)
 
         else:
             return np.array([np.NaN, np.NaN])
 
-
-
-    def flight_target(self, track_state: np.ndarray) -> np.ndarray:
-        c = np.cos(track_state[1])
-        s = np.sin(track_state[1])
-        rot = (np.array([[c, -s], [s, c]]))
-
-        vel = np.matmul(rot, np.array([[-2 * track_state[0]], [6.]])).flatten()
-
-        target = np.array([*vel, 2 * track_state[1], 2.])
-
-        return target

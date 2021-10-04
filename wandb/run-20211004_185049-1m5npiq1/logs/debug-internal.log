@@ -1,0 +1,1258 @@
+2021-10-04 18:50:50,307 INFO    MainThread:95263 [internal.py:wandb_internal():86] W&B internal server running at pid: 95263, started at: 2021-10-04 18:50:50.307051
+2021-10-04 18:50:50,309 DEBUG   SenderThread:95263 [sender.py:send():182] send: header
+2021-10-04 18:50:50,309 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: check_version
+2021-10-04 18:50:50,309 INFO    WriterThread:95263 [datastore.py:open_for_write():77] open: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/run-1m5npiq1.wandb
+2021-10-04 18:50:50,309 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: check_version
+2021-10-04 18:50:50,399 DEBUG   SenderThread:95263 [sender.py:send():182] send: run
+2021-10-04 18:50:50,655 INFO    SenderThread:95263 [dir_watcher.py:__init__():168] watching files in: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files
+2021-10-04 18:50:50,656 INFO    SenderThread:95263 [sender.py:_start_run_threads():740] run started: 1m5npiq1 with start time 1633369849
+2021-10-04 18:50:50,657 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:50:50,658 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:50:50,660 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: run_start
+2021-10-04 18:50:51,419 DEBUG   HandlerThread:95263 [meta.py:__init__():39] meta init
+2021-10-04 18:50:51,419 DEBUG   HandlerThread:95263 [meta.py:__init__():53] meta init done
+2021-10-04 18:50:51,420 DEBUG   HandlerThread:95263 [meta.py:probe():210] probe
+2021-10-04 18:50:51,425 DEBUG   HandlerThread:95263 [meta.py:_setup_git():200] setup git
+2021-10-04 18:50:51,442 DEBUG   HandlerThread:95263 [meta.py:_setup_git():207] setup git done
+2021-10-04 18:50:51,442 DEBUG   HandlerThread:95263 [meta.py:_save_pip():57] save pip
+2021-10-04 18:50:51,442 DEBUG   HandlerThread:95263 [meta.py:_save_pip():71] save pip done
+2021-10-04 18:50:51,442 DEBUG   HandlerThread:95263 [meta.py:probe():252] probe done
+2021-10-04 18:50:51,445 DEBUG   SenderThread:95263 [sender.py:send():182] send: files
+2021-10-04 18:50:51,445 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-metadata.json with policy now
+2021-10-04 18:50:51,448 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:50:51,449 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:50:51,666 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:50:51,667 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-metadata.json
+2021-10-04 18:50:51,668 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/requirements.txt
+2021-10-04 18:50:51,668 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_created():216] file/dir created: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:50:52,179 INFO    Thread-11 :95263 [upload_job.py:push():137] Uploaded file /tmp/tmp4t61kz73wandb/1m0wien7-wandb-metadata.json
+2021-10-04 18:50:53,664 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:50:55,664 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:01,666 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:01,748 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:01,748 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:01,749 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:01,908 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:01,908 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:01,908 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:02,666 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:04,053 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:04,053 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:04,054 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:04,214 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:04,214 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:04,214 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:04,667 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:05,667 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:06,548 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:06,549 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:06,550 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:06,634 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:51:06,634 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:51:06,667 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:06,821 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:06,822 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:06,822 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:07,668 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:07,668 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:09,554 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:09,555 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:09,555 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:09,669 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:09,752 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:09,752 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:09,752 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:10,669 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:11,669 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:12,927 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:12,928 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:12,928 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:13,100 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:13,100 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:13,101 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:13,670 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:13,670 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:16,282 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:16,283 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:16,285 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:16,472 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:16,472 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:16,472 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:16,671 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:17,671 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:19,331 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:19,331 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:19,332 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:19,490 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:19,491 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:19,491 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:19,672 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:19,692 DEBUG   SenderThread:95263 [sender.py:send():182] send: stats
+2021-10-04 18:51:21,672 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:21,823 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:51:21,823 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:51:21,996 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:21,996 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:21,997 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:22,113 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:22,114 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:22,114 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:22,672 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:23,672 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:24,284 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:24,285 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:24,285 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:24,443 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:24,444 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:24,444 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:24,673 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:25,673 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:26,709 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:26,709 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:26,709 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:26,875 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:26,875 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:26,875 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:27,673 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:27,674 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:29,264 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:29,264 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:29,264 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:29,429 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:29,429 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:29,430 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:29,674 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:31,670 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:31,670 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:31,671 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:31,674 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:31,675 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:31,828 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:31,828 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:31,828 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:32,675 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:33,675 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:34,114 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:34,114 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:34,115 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:34,276 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:34,276 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:34,276 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:34,676 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:35,676 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:36,430 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:36,431 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:36,431 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:36,588 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:36,588 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:36,588 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:36,676 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:36,997 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:51:36,997 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:51:37,676 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:38,988 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:38,988 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:38,988 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:39,148 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:39,149 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:39,149 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:39,677 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:39,677 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:41,336 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:41,337 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:41,337 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:41,496 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:41,496 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:41,497 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:41,677 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:43,678 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:43,703 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:43,703 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:43,703 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:43,861 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:43,861 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:43,862 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:44,678 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:45,678 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:46,048 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:46,048 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:46,049 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:46,209 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:46,209 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:46,209 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:46,678 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:47,679 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:48,328 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:48,328 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:48,329 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:48,499 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:48,499 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:48,499 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:48,679 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:49,679 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:49,934 DEBUG   SenderThread:95263 [sender.py:send():182] send: stats
+2021-10-04 18:51:50,793 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:50,793 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:50,794 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:50,951 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:50,952 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:50,952 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:51,680 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:51,680 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:52,177 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:51:52,177 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:51:53,107 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:53,107 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:53,108 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:53,265 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:53,265 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:53,265 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:53,680 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:53,680 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:55,477 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:55,478 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:55,478 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:55,638 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:55,638 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:55,638 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:55,681 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:57,681 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:51:57,809 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:57,809 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:57,810 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:57,966 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:51:57,966 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:51:57,967 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:51:58,682 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:51:59,682 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:00,305 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:00,305 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:00,305 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:00,476 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:00,476 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:00,477 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:00,682 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:01,683 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:02,746 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:02,746 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:02,746 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:02,901 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:02,901 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:02,901 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:03,683 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:03,683 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:05,087 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:05,088 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:05,088 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:05,247 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:05,248 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:05,248 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:05,684 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:05,684 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:07,409 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:52:07,409 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:52:07,596 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:07,596 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:07,596 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:07,662 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:07,662 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:07,663 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:07,684 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:09,685 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:09,908 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:09,908 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:09,908 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:10,076 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:10,076 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:10,077 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:10,685 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:11,685 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:12,193 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:12,193 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:12,194 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:12,356 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:12,356 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:12,356 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:12,685 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:13,686 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:14,660 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:14,660 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:14,661 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:14,686 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:14,818 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:14,818 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:14,819 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:15,686 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:15,686 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:17,045 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:17,048 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:17,048 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:17,208 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:17,209 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:17,209 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:17,687 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:17,687 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:19,392 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:19,392 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:19,394 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:19,551 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:19,551 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:19,551 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:19,688 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:19,688 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:20,138 DEBUG   SenderThread:95263 [sender.py:send():182] send: stats
+2021-10-04 18:52:21,716 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:21,716 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:21,717 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:21,881 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:21,881 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:21,881 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:22,599 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:52:22,599 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:52:22,688 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:23,689 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:24,057 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:24,057 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:24,057 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:24,214 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:24,214 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:24,214 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:24,689 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:25,689 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:26,476 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:26,476 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:26,477 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:26,631 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:26,632 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:26,632 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:26,690 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:27,690 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:28,814 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:28,814 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:28,814 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:28,977 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:28,977 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:28,977 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:29,690 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:29,691 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:31,327 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:31,327 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:31,327 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:31,499 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:31,499 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:31,499 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:31,691 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:31,691 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:33,716 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:33,716 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:33,717 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:33,873 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:33,873 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:33,874 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:34,691 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:36,052 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:36,053 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:36,053 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:36,209 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:36,209 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:36,209 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:36,692 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:36,692 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:37,780 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:52:37,780 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:52:38,448 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:38,448 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:38,449 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:38,604 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:38,605 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:38,605 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:38,692 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:38,693 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:40,693 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:40,874 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:40,874 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:40,874 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:41,046 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:41,047 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:41,047 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:41,693 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:42,693 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:43,310 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:43,310 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:43,311 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:43,474 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:43,475 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:43,475 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:43,694 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:44,694 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:45,597 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:45,597 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:45,598 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:45,694 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:45,754 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:45,754 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:45,755 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:46,694 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:46,694 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:47,940 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:47,940 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:47,940 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:48,099 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:48,099 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:48,099 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:48,695 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:50,386 DEBUG   SenderThread:95263 [sender.py:send():182] send: stats
+2021-10-04 18:52:50,412 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:50,412 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:50,413 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:50,570 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:50,570 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:50,570 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:50,695 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:50,696 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:52,696 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:52,775 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:52,776 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:52,776 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:52,942 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:52,943 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:52,943 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:52,952 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:52:52,953 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:52:53,696 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:54,696 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:55,109 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:55,109 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:55,110 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:55,268 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:55,268 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:55,268 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:55,697 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:56,697 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:57,394 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:57,395 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:57,395 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:57,554 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:57,554 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:57,555 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:57,697 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:52:58,697 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:52:59,788 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:59,788 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:59,790 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:52:59,949 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:52:59,949 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:52:59,949 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:00,698 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:02,399 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:02,399 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:02,400 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:02,567 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:02,567 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:02,567 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:02,699 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:02,699 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:04,700 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:04,872 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:04,872 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:04,872 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:05,033 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:05,033 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:05,033 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:05,700 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:06,700 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:07,346 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:07,347 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:07,347 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:07,506 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:07,506 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:07,506 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:07,700 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:08,179 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:53:08,179 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:53:08,701 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:09,966 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:09,966 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:09,968 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:10,123 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:10,123 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:10,123 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:10,701 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:12,609 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:12,609 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:12,610 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:12,702 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:12,702 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:12,781 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:12,781 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:12,781 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:13,702 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:14,703 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:15,334 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:15,334 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:15,335 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:15,490 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:15,490 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:15,490 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:15,703 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:16,703 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:17,952 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:17,952 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:17,952 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:18,110 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:18,111 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:18,111 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:18,704 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:20,617 DEBUG   SenderThread:95263 [sender.py:send():182] send: stats
+2021-10-04 18:53:20,645 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:20,645 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:20,646 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:20,704 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:20,704 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:20,806 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:20,807 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:20,807 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:21,704 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:22,705 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:23,312 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:23,312 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:23,313 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:23,364 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:53:23,364 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:53:23,556 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:23,556 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:23,557 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:23,705 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:24,705 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:25,977 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:25,977 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:25,978 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:26,148 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:26,149 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:26,149 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:26,706 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:28,656 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:28,656 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:28,657 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:28,706 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:28,706 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:28,815 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:28,816 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:28,816 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:29,706 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:30,707 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:31,116 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:31,116 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:31,117 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:31,274 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:31,274 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:31,275 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:31,707 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:32,707 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:33,608 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:33,608 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:33,609 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:33,707 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:33,771 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:33,771 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:33,771 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:34,708 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:36,082 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:36,083 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:36,083 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:36,241 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:36,241 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:36,242 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:36,708 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:36,708 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:38,500 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:38,501 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:38,501 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:38,557 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:53:38,557 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:53:38,708 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:38,708 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:38,734 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:38,734 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:38,735 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:39,709 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:40,709 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:41,064 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:41,064 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:41,065 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:41,221 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:41,221 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:41,222 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:41,709 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:42,709 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:43,703 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:43,704 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:43,704 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:43,710 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:43,867 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:43,867 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:43,868 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:44,710 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:46,275 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:46,275 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:46,275 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:46,433 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:46,434 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:46,434 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:46,710 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:46,711 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:48,711 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:48,829 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:48,830 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:48,830 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:48,989 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:48,989 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:48,989 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:49,711 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:50,711 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:50,835 DEBUG   SenderThread:95263 [sender.py:send():182] send: stats
+2021-10-04 18:53:51,439 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:51,439 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:51,441 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:51,600 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:51,600 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:51,600 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:51,712 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:52,712 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:53,746 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:53:53,747 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:53:54,322 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:54,323 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:54,343 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:54,480 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:54,481 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:54,481 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:54,712 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:56,713 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:56,886 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:56,887 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:56,887 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:57,047 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:57,047 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:57,048 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:57,713 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:53:58,713 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:53:59,312 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:59,312 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:59,313 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:59,470 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:53:59,471 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:53:59,471 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:53:59,713 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:00,714 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:01,766 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:01,766 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:01,767 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:01,924 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:01,924 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:01,924 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:02,714 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:04,311 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:04,311 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:04,311 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:04,473 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:04,473 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:04,473 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:04,715 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:04,715 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:06,715 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:06,855 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:06,855 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:06,856 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:07,016 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:07,016 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:07,017 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:07,715 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:08,716 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:08,955 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:54:08,956 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:54:09,387 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:09,388 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:09,388 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:09,553 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:09,553 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:09,554 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:09,716 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:10,716 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:11,891 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:11,891 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:11,894 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:12,056 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:12,056 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:12,056 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:12,717 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:14,447 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:14,447 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:14,448 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:14,612 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:14,613 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:14,613 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:14,717 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:14,718 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:16,718 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:16,929 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:16,930 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:16,930 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:17,097 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:17,098 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:17,098 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:17,718 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:18,718 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:19,483 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:19,483 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:19,483 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:19,639 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:19,639 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:19,640 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:19,718 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:20,719 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:21,100 DEBUG   SenderThread:95263 [sender.py:send():182] send: stats
+2021-10-04 18:54:21,895 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:21,896 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:21,898 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:22,052 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:22,053 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:22,053 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:22,719 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:24,214 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:54:24,215 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:54:24,676 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:24,676 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:24,676 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:24,720 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:24,720 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:24,838 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:24,838 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:24,839 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:25,720 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:26,721 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:27,251 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:27,251 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:27,251 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:27,410 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:27,410 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:27,410 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:27,721 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:28,721 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:29,662 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:29,662 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:29,663 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:29,721 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:29,824 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:29,824 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:29,824 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:30,722 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:30,722 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:32,325 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:32,325 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:32,327 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:32,481 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:32,481 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:32,481 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:32,722 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:34,723 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:35,020 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:35,021 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:35,021 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:35,184 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:35,184 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:35,184 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:35,723 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:36,723 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:37,597 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:37,597 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:37,597 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:37,723 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:37,757 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:37,757 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:37,758 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:38,724 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:38,724 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:39,396 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:54:39,397 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:54:40,108 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:40,108 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:40,109 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:40,267 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:40,267 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:40,267 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:40,724 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:42,584 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:42,584 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:42,586 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:42,725 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:42,725 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:42,744 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:42,744 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:42,744 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:43,725 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:44,725 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:45,304 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:45,305 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:45,305 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:45,469 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:45,469 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:45,469 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:45,725 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:46,726 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:47,836 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:47,836 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:47,836 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:47,995 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:47,996 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:47,996 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:48,726 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:48,726 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:50,275 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:50,276 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:50,276 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:50,435 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:50,435 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:50,436 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:50,727 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:51,325 DEBUG   SenderThread:95263 [sender.py:send():182] send: stats
+2021-10-04 18:54:52,642 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:52,642 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:52,644 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:52,727 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:52,727 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:52,801 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:52,802 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:52,802 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:53,727 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:54,580 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:54:54,581 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:54:54,727 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:55,050 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:55,050 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:55,051 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:55,216 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:55,217 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:55,217 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:55,728 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:56,728 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:57,501 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:57,502 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:57,509 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:57,658 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:57,659 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:57,659 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:54:57,728 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:54:58,728 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:54:59,942 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:54:59,942 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:54:59,943 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:00,101 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:00,101 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:00,102 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:00,729 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:00,729 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:02,470 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:02,470 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:02,470 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:02,631 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:02,631 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:02,632 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:02,729 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:04,730 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:04,885 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:04,885 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:04,886 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:05,044 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:05,044 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:05,045 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:05,730 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:06,731 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:07,368 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:07,368 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:07,369 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:07,529 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:07,529 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:07,529 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:07,731 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:08,731 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:09,768 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:55:09,768 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:55:09,948 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:09,948 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:09,949 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:10,057 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:10,057 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:10,057 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:10,732 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:12,274 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:12,275 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:12,275 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:12,431 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:12,432 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:12,432 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:12,732 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:12,733 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:14,702 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:14,702 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:14,702 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:14,733 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:14,733 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:14,871 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:14,871 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:14,872 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:15,733 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:16,734 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:17,130 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:17,130 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:17,131 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:17,291 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:17,291 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:17,291 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:17,734 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:18,734 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:19,674 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:19,674 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:19,675 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:19,734 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:19,835 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:19,835 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:19,835 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:20,735 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:20,735 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:21,577 DEBUG   SenderThread:95263 [sender.py:send():182] send: stats
+2021-10-04 18:55:22,218 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:22,218 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:22,225 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:22,376 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:22,376 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:22,376 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:22,736 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:24,737 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:24,882 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:24,883 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:24,883 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:24,950 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:55:24,950 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:55:25,148 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:25,148 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:25,149 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:25,737 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:26,738 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:27,447 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:27,447 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:27,448 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:27,607 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:27,607 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:27,608 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:27,738 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:28,738 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:29,920 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:29,920 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:29,921 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:30,077 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:30,077 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:30,078 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:30,739 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:32,334 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:32,334 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:32,335 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:32,491 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:32,491 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:32,492 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:32,740 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:32,740 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:34,740 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:35,142 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:35,142 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:35,149 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:35,309 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:35,309 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:35,310 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:35,741 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:36,741 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:37,632 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:37,632 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:37,632 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:37,741 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:37,804 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:37,804 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:37,805 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:38,742 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:38,742 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:40,151 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:55:40,151 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:55:40,332 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:40,332 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:40,332 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:40,332 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:40,332 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:40,333 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:40,742 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:42,576 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:42,576 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:42,576 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:42,737 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:42,738 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:42,738 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:42,743 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:42,743 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:44,743 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:45,019 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:45,019 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:45,020 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:45,204 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:45,204 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:45,204 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:45,743 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:46,744 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:47,831 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:47,832 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:47,832 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:47,994 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:47,994 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:47,995 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:48,744 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:48,744 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:50,452 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:50,452 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:50,453 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:50,611 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:50,612 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:50,612 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:50,745 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:51,812 DEBUG   SenderThread:95263 [sender.py:send():182] send: stats
+2021-10-04 18:55:52,745 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:53,095 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:53,095 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:53,095 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:53,258 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:53,258 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:53,258 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:53,747 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:54,747 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:55,333 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:55:55,334 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:55:55,857 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:55,858 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:55,858 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:56,013 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:56,013 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:56,013 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:56,748 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:56,748 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:55:58,670 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:58,670 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:58,670 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:58,748 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:55:58,830 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:55:58,831 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:55:58,831 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:55:59,748 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:00,749 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:01,541 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:01,541 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:01,561 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:01,699 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:01,699 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:01,700 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:01,749 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:02,749 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:04,209 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:04,209 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:04,210 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:04,370 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:04,371 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:04,371 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:04,750 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:06,750 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:06,764 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:06,764 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:06,764 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:06,929 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:06,930 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:06,930 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:07,750 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:08,751 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:09,293 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:09,293 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:09,294 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:09,451 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:09,451 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:09,451 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:09,751 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:10,553 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:56:10,553 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:56:10,751 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:11,829 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:11,830 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:11,830 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:11,988 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:11,988 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:11,988 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:12,752 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:12,752 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:14,379 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:14,379 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:14,381 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:14,536 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:14,536 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:14,537 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:14,752 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:16,753 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:16,907 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:16,907 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:16,908 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:17,080 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:17,081 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:17,081 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:17,753 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:18,754 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:19,475 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:19,475 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:19,475 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:19,635 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:19,635 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:19,635 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:19,754 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:20,754 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:22,037 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:22,037 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:22,038 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:22,105 DEBUG   SenderThread:95263 [sender.py:send():182] send: stats
+2021-10-04 18:56:22,196 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:22,196 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:22,196 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:22,755 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:22,755 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:24,467 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:24,467 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:24,468 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:24,626 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:24,626 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:24,627 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:24,755 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:25,736 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:56:25,737 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:56:26,756 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:26,925 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:26,926 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:26,926 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:27,081 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:27,081 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:27,082 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:27,756 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:28,756 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:29,222 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:29,223 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:29,223 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:29,380 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:29,380 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:29,381 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:29,757 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:30,757 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:31,501 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:31,502 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:31,502 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:31,659 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:31,659 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:31,659 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:31,757 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:32,757 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:33,945 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:33,945 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:33,946 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:34,101 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:34,101 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:34,101 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:34,758 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:34,758 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:36,497 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:36,498 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:36,498 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:36,654 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:36,654 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:36,654 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:36,759 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:38,759 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:39,130 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:39,130 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:39,141 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:39,288 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:39,288 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:39,288 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:39,759 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:40,759 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:40,966 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:56:40,966 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:56:41,864 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:41,865 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:41,865 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:42,025 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:42,025 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:42,026 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:42,760 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:42,760 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:44,437 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:44,437 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:44,438 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:44,600 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:44,601 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:44,601 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:44,761 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:46,761 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:47,078 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:47,079 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:47,079 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:47,254 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:47,254 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:47,255 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:47,761 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:48,762 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:49,681 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:49,682 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:49,682 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:49,762 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:49,838 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:49,838 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:49,839 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:50,762 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:50,762 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:52,162 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:52,162 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:52,169 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:52,318 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:52,318 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:52,318 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:52,330 DEBUG   SenderThread:95263 [sender.py:send():182] send: stats
+2021-10-04 18:56:52,763 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:52,763 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:54,563 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:54,564 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:54,564 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:54,722 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:54,722 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:54,722 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:54,764 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:56,297 DEBUG   HandlerThread:95263 [handler.py:handle_request():128] handle_request: stop_status
+2021-10-04 18:56:56,297 DEBUG   SenderThread:95263 [sender.py:send_request():196] send_request: stop_status
+2021-10-04 18:56:56,764 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:57,121 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:57,121 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:57,121 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:57,284 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:57,284 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:57,285 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:56:57,764 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:56:58,765 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/output.log
+2021-10-04 18:56:59,972 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:56:59,972 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:56:59,972 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:57:00,132 DEBUG   SenderThread:95263 [sender.py:send():182] send: history
+2021-10-04 18:57:00,133 DEBUG   SenderThread:95263 [sender.py:send():182] send: summary
+2021-10-04 18:57:00,133 INFO    SenderThread:95263 [sender.py:_save_file():873] saving file wandb-summary.json with policy end
+2021-10-04 18:57:00,765 INFO    Thread-8  :95263 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/jet/Sandboxes/railway_drone/wandb/run-20211004_185049-1m5npiq1/files/wandb-summary.json
+2021-10-04 18:57:01,998 WARNING MainThread:95263 [internal.py:wandb_internal():145] Internal process interrupt: 1
+2021-10-04 18:57:02,186 WARNING MainThread:95263 [internal.py:wandb_internal():145] Internal process interrupt: 2
+2021-10-04 18:57:02,186 ERROR   MainThread:95263 [internal.py:wandb_internal():148] Internal process interrupted.
+2021-10-04 18:57:02,517 INFO    MainThread:95263 [internal.py:handle_exit():76] Internal process exited

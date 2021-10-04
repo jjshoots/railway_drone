@@ -1,0 +1,15 @@
+Using weights file: /weights/Version_7/weights0.pth
+Using weights file: /optim_weights/Version_7/weights0.pth
+Lowest Running Loss for trackNet: 0.14571025388091058 @ epoch 6
+Epoch 6; Batch Number 0; Running Loss 0.48468; Lowest Running Loss 0.14571
+Epoch 7; Batch Number 0; Running Loss 0.49590; Lowest Running Loss 0.14571
+Epoch 8; Batch Number 0; Running Loss 0.51970; Lowest Running Loss 0.14571
+Epoch 9; Batch Number 0; Running Loss 0.53229; Lowest Running Loss 0.14571
+Epoch 10; Batch Number 0; Running Loss 0.55323; Lowest Running Loss 0.14571
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 11; Batch Number 0; Running Loss 1.49748; Lowest Running Loss 0.14571
+Epoch 12; Batch Number 0; Running Loss 0.49301; Lowest Running Loss 0.14571
+Epoch 13; Batch Number 0; Running Loss 1.46765; Lowest Running Loss 0.14571
+Epoch 14; Batch Number 0; Running Loss 1.43906; Lowest Running Loss 0.14571
+Epoch 15; Batch Number 0; Running Loss 1.47036; Lowest Running Loss 0.14571
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth

@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 import cv2
 
 
-class helpers:
+class Logger:
     def __init__(self, mark_number, version_number, weights_location, epoch_interval=-1, batch_interval=-1, max_skips=5, greater_than=0.0, increment=True):
         """
         Helper class for handling loss recording and weights file management
@@ -163,62 +163,70 @@ class helpers:
 #################################################################################################
 #################################################################################################
 
-    @staticmethod
-    def get_device():
-        # select device
-        device = 'cpu'
-        if(torch.cuda.is_available()):
-            device = torch.device('cuda:0')
 
-        print('-----------------------')
-        print('Using Device', device)
-        print('-----------------------')
+def get_device():
+    # select device
+    device = 'cpu'
+    if(torch.cuda.is_available()):
+        device = torch.device('cuda:0')
 
-        return device
+    print('-----------------------')
+    print('Using Device', device)
+    print('-----------------------')
 
-
-    # converts saliency map to pseudo segmentation
-    # expects input of dim 2
-    # fastener_area_threshold is minimum area of output object BEFORE scaling to input size
-    @staticmethod
-    def saliency_to_contour(input, original_image, fastener_area_threshold, input_output_ratio):
-        # find contours in the image
-        threshold = input.detach().cpu().squeeze().numpy().astype(np.uint8)
-        contours, _ = cv2.findContours(threshold, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-
-        # draw contours
-        contour_image = None
-        contour_number = 0
-        if original_image != None:
-            contour_image = original_image.squeeze().to('cpu').detach().numpy()
-
-        for contour in contours:
-            if cv2.contourArea(contour) > fastener_area_threshold:
-                contour *= input_output_ratio
-                contour_number += 1
-                if original_image != None:
-                    x,y,w,h = cv2.boundingRect(contour)
-                    contour_image = contour_image.astype(np.float32)
-                    cv2.rectangle(contour_image,(x,y),(x+w,y+h),1,2)
-
-        # return drawn image
-        return contour_image, contour_number
+    return device
 
 
-    @staticmethod
-    def network_stats(network, input_image):
-        total_params = sum(p.numel() for p in network.parameters() if p.requires_grad)
-        count_ops(network, input_image)
-        print(f'Total number of Parameters: {total_params}')
+def gpuize(input, device):
+    if torch.is_tensor(input):
+        if input.device == device:
+            return input.float()
+        return input.to(device).float()
+    return torch.tensor(input).float().to(device)
+
+
+def cpuize(input):
+    return input.detach().cpu().numpy()
+
+
+# converts saliency map to pseudo segmentation
+# expects input of dim 2
+# fastener_area_threshold is minimum area of output object BEFORE scaling to input size
+def saliency_to_contour(input, original_image, fastener_area_threshold, input_output_ratio):
+    # find contours in the image
+    threshold = input.detach().cpu().squeeze().numpy().astype(np.uint8)
+    contours, _ = cv2.findContours(threshold, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+    # draw contours
+    contour_image = None
+    contour_number = 0
+    if original_image != None:
+        contour_image = original_image.squeeze().to('cpu').detach().numpy()
+
+    for contour in contours:
+        if cv2.contourArea(contour) > fastener_area_threshold:
+            contour *= input_output_ratio
+            contour_number += 1
+            if original_image != None:
+                x,y,w,h = cv2.boundingRect(contour)
+                contour_image = contour_image.astype(np.float32)
+                cv2.rectangle(contour_image,(x,y),(x+w,y+h),1,2)
+
+    # return drawn image
+    return contour_image, contour_number
+
+
+def network_stats(network, input_image):
+    total_params = sum(p.numel() for p in network.parameters() if p.requires_grad)
+    count_ops(network, input_image)
+    print(f'Total number of Parameters: {total_params}')
 
 
 
-    @staticmethod
-    def fgsm_attack(data, epsilon=0.1):
-        # Create the perturbed data by adjusting each pixel of the input data
-        data = data + epsilon * data.grad.data.sign()
-        # Adding clipping to maintain [0,1] range
-        data = torch.clamp(data, 0, 1)
+def fgsm_attack(data, epsilon=0.1):
+    # Create the perturbed data by adjusting each pixel of the input data
+    data = data + epsilon * data.grad.data.sign()
+    # Adding clipping to maintain [0,1] range
+    data = torch.clamp(data, 0, 1)
 
-        return data
-
+    return data

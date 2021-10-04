@@ -1,0 +1,35 @@
+
+No weights directory for weights/Version_7, generating new one in 3 seconds.
+No weights directory for optim_weights/Version_7, generating new one in 3 seconds.
+No weights file found, generating new one during training.
+Epoch 1; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
+Epoch 2; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
+Epoch 3; Batch Number 0; Running Loss 10.00000; Lowest Running Loss 10.00000
+Epoch 4; Batch Number 0; Running Loss 0.18465; Lowest Running Loss 10.00000
+New lowest point, saving weights to: weights/weights0.pth
+Epoch 5; Batch Number 0; Running Loss 0.39587; Lowest Running Loss 0.18465
+Epoch 6; Batch Number 0; Running Loss 0.57052; Lowest Running Loss 0.18465
+Epoch 7; Batch Number 0; Running Loss 0.59396; Lowest Running Loss 0.18465
+Epoch 8; Batch Number 0; Running Loss 0.54060; Lowest Running Loss 0.18465
+Epoch 9; Batch Number 0; Running Loss 0.61051; Lowest Running Loss 0.18465
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 10; Batch Number 0; Running Loss 0.55579; Lowest Running Loss 0.18465
+Epoch 11; Batch Number 0; Running Loss 0.54590; Lowest Running Loss 0.18465
+Epoch 12; Batch Number 0; Running Loss 0.53413; Lowest Running Loss 0.18465
+Epoch 13; Batch Number 0; Running Loss 0.50277; Lowest Running Loss 0.18465
+Epoch 14; Batch Number 0; Running Loss 0.58887; Lowest Running Loss 0.18465
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 15; Batch Number 0; Running Loss 0.62748; Lowest Running Loss 0.18465
+Epoch 16; Batch Number 0; Running Loss 0.66878; Lowest Running Loss 0.18465
+Epoch 17; Batch Number 0; Running Loss 0.68259; Lowest Running Loss 0.18465
+Epoch 18; Batch Number 0; Running Loss 0.57479; Lowest Running Loss 0.18465
+Epoch 19; Batch Number 0; Running Loss 0.53219; Lowest Running Loss 0.18465
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 20; Batch Number 0; Running Loss 0.60443; Lowest Running Loss 0.18465
+Epoch 21; Batch Number 0; Running Loss 0.66261; Lowest Running Loss 0.18465
+Epoch 22; Batch Number 0; Running Loss 0.58487; Lowest Running Loss 0.18465
+Epoch 23; Batch Number 0; Running Loss 0.62204; Lowest Running Loss 0.18465
+Epoch 24; Batch Number 0; Running Loss 0.75427; Lowest Running Loss 0.18465
+Passed 5 intervals without saving so far, saving weights to: /weights_intermediary.pth
+Epoch 25; Batch Number 0; Running Loss 0.68820; Lowest Running Loss 0.18465
+Epoch 26; Batch Number 0; Running Loss 0.71863; Lowest Running Loss 0.18465

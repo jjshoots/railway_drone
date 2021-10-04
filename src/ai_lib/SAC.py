@@ -147,6 +147,9 @@ class SoftActorCritic(nn.Module):
             next_q, _ = torch.min(next_q, dim=-1, keepdim=True)
 
             # TD learning, targetQ = R + gamma*nextQ*done
+            # intuitively this is a slightly less optimal loss function
+            # incorporating entropy into the q value will make the agent
+            # explore areas which are more robust to noise in the actions
             target_q = rewards + done * gamma * next_q
 
         # critic loss is mean squared TD errors
