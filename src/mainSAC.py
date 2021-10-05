@@ -166,6 +166,7 @@ def display(set):
     uncertainty = np.zeros((set.num_envs, 1))
     state = [None] * set.num_envs
     auxiliary = np.zeros((set.num_envs, 2))
+    labels = np.zeros((set.num_envs, 2))
 
     cv2.namedWindow('display', cv2.WINDOW_NORMAL)
 
@@ -174,6 +175,7 @@ def display(set):
             obs, aux, _, dne, lbl = env.step(target[i])
             state[i] = obs
             auxiliary[i] = aux
+            labels[i] = lbl
 
             obs = gpuize((obs[..., :-1].transpose(2, 0, 1) - 127.5) / 255., set.device).unsqueeze(0)
             aux = gpuize(aux, set.device).unsqueeze(0)
@@ -185,6 +187,8 @@ def display(set):
                 output = net.backbone(obs, aux)
                 output = net.actor(output)
                 target[i] = cpuize(output[0])
+            else:
+                target[i] = labels
 
         img = np.concatenate(state, axis=1)
 
