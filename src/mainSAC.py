@@ -91,7 +91,7 @@ def train(set):
 
         # for logging
         rewards_tracker = -np.mean(np.array(rewards_tracker))
-        entropy_tracker = -np.mean(np.array(entropy_tracker))
+        entropy_tracker = np.mean(np.array(entropy_tracker))
 
         # train on data
         net.train()
