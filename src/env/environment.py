@@ -35,6 +35,7 @@ class Environment():
 
         self.env = Aviary(rails_dir=self.rails_dir, drone_dir=self.drone_dir, plants_dir=self.plants_dir, render=self.render)
         self.env.drone.set_mode(4)
+        self.frame_size = self.env.drone.frame_size
 
         # clear argsv[0] message, I don't know why it works don't ask me why it works
         print ("\033[A                             \033[A")
