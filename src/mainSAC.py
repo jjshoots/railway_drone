@@ -168,7 +168,8 @@ def display(set):
     auxiliary = np.zeros((set.num_envs, 2))
     labels = np.zeros((set.num_envs, 2))
 
-    cv2.namedWindow('display', cv2.WINDOW_NORMAL)
+    # cv2.namedWindow('display', cv2.WINDOW_NORMAL)
+    time.sleep(10)
 
     while True:
         for i, env in enumerate(envs):
@@ -183,17 +184,16 @@ def display(set):
             if dne:
                 env.reset()
 
-            if True:
+            if False:
                 output = net.backbone(obs, aux)
                 output = net.actor(output)
                 target[i] = cpuize(output[0])
             else:
                 target[i] = labels
 
-        img = np.concatenate(state, axis=1)
-
-        cv2.imshow('display', img)
-        cv2.waitKey(1)
+        # img = np.concatenate(state, axis=1)
+        # cv2.imshow('display', img)
+        # cv2.waitKey(1)
 
 
 def setup_envs(set):
