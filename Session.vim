@@ -34,12 +34,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 186 - ((19 * winheight(0) + 22) / 44)
+let s:l = 309 - ((43 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-186
-normal! 05|
+309
+normal! 09|
 if exists(':tcd') == 2 | tcd ~/Sandboxes/railway_drone | endif
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'

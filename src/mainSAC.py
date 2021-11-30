@@ -292,7 +292,7 @@ def setup_nets(set):
 if __name__ == '__main__':
     signal(SIGINT, shutdown_handler)
     set = parse_set()
-    torch.autograd.set_detect_anomaly(True)
+    check_venv()
 
     """ SCRIPTS HERE """
 
