@@ -48,7 +48,6 @@ class Aviary(bullet_client.BulletClient):
 
         # spawn drone
         self.drone = Drone(self, drone_dir=self.drone_dir, camera_Hz=self.camera_Hz)
-        self.drone.reset()
 
         # start rails, the first rail in the list is the main rail to follow
         self.rails = []

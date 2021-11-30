@@ -22,6 +22,8 @@ class Environment():
 
         self.render = num_envs == 1
 
+        self.num_actions = 2
+
         self.reset()
 
 
@@ -87,7 +89,11 @@ class Environment():
                 done = 1.
                 self.track_state = np.array([0., 0.])
 
-        return self.env.drone.rgbImg, self.drone_state, reward, done, self.track_state
+        # label = self.track_state if np.linalg.norm(self.track_state) > 0.4 else np.zeros_like(self.track_state)
+        # label = np.clip(self.track_state, 0., 1.)
+        label = self.track_state
+
+        return self.env.drone.rgbImg, self.drone_state, reward, done, label
 
 
     def tgt2set(self, track_state: np.ndarray) -> np.ndarray:

@@ -6,23 +6,30 @@ num_envs: 10
 max_steps: 2000
 
 # training params
-buffer_size: 20000
-buffer_size_debug: 100
-batch_size: 300
-start_epoch: 0
-epochs: 10000
-pretrain_epochs: 3
 transitions_per_epoch: 3000
-repeats_per_buffer: 2
-scheduler_steps: 5
-scheduler_gamma: 0.5
+buffer_size_debug: 100
+repeats_per_buffer: 5
+buffer_size: 20000
+batch_size: 300
+
+pretrain_epochs: 3
+start_epoch: 0
+epochs: 50
+
 starting_LR: 0.001
+scheduler_steps: 1
+scheduler_gamma: 0.5
+
 reg_lambda: 0.01
+use_entropy: true
+target_entropy: 2.0
+ac_update_ratio: 1
+confidence_scale: 0.5
 
 # helper params
 weights_directory: "weights"
 optim_weights_directory: "optim_weights"
-tracknet_version: "_8"
-tracknet_number: 0
+net_version: "_22"
+net_number: 0
 epoch_interval: 1
 batch_interval: -1

@@ -7,13 +7,12 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +172 src/mainSAC.py
-badd +25 src/settings.yaml
-badd +34 src/ai_lib/normal_inverse_gamma.py
-badd +184 src/ai_lib/UASAC.py
-badd +117 src/main.py
-badd +72 src/env/aviary.py
-badd +107 src/env/environment.py
+badd +188 src/mainSAC.py
+badd +96 src/env/drone.py
+badd +124 src/env/aviary.py
+badd +12 src/env/PID.py
+badd +76 src/env/environment.py
+badd +90 src/control_check.py
 argglobal
 %argdel
 $argadd ./
@@ -35,12 +34,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 172 - ((20 * winheight(0) + 21) / 42)
+let s:l = 186 - ((19 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-172
-normal! 0
+186
+normal! 05|
 if exists(':tcd') == 2 | tcd ~/Sandboxes/railway_drone | endif
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'

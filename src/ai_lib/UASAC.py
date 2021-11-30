@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import warnings
 import torch
 import torch.nn as nn
 import torch.distributions as dist
@@ -58,8 +59,8 @@ class GaussianActor(nn.Module):
         output = gamma, nu, alpha, beta
         normals = ShrunkenNormalInvGamma(*output)
 
-        # compute aleotoric uncertainty
-        uncertainty = NIG_uncertainty(*output[-2:])
+        # compute epistemic uncertainty
+        uncertainty = NIG_uncertainty(*output)
 
         # sample from dist
         mu_samples = normals.rsample()
@@ -72,15 +73,22 @@ class GaussianActor(nn.Module):
         return actions, entropies, uncertainty
 
 
+    @staticmethod
+    def infer(gamma, nu, alpha, beta):
+        return torch.tanh(gamma)
+
+
 
 class UASAC(nn.Module):
     """
     Uncertainty Aware Actor Critic
     """
-    def __init__(self, num_actions, entropy_tuning=True, target_entropy=None):
+    def __init__(self, num_actions, entropy_tuning=True, target_entropy=None, confidence_scale=3):
         super().__init__()
 
         self.num_actions = num_actions
+        self.use_entropy = entropy_tuning
+        self.confidence_scale = confidence_scale
 
         # backbone
         self.backbone = Backbone()
@@ -103,7 +111,10 @@ class UASAC(nn.Module):
             if target_entropy is None:
                 self.target_entropy = -float(num_actions)
             else:
-                assert target_entropy < 0, 'target entropy must be negative'
+                if target_entropy > 0:
+                    warnings.warn(f"Target entropy is recommended to be negative,\
+                                  currently it is {target_entropy},\
+                                  I hope you know what you're doing...")
                 self.target_entropy = target_entropy
             self.log_alpha = nn.Parameter(torch.tensor(0., requires_grad=True))
         else:
@@ -116,13 +127,15 @@ class UASAC(nn.Module):
             target.data.copy_(target.data * (1.0 - tau) + source.data * tau)
 
 
-    def calc_critic_loss(self, states, auxiliary, next_states, next_auxiliary, actions, next_actions, rewards, dones, gamma=0.7):
+    def calc_critic_loss(self, states, auxiliary, next_states, next_auxiliary, actions, next_actions, rewards, dones, gamma=0.8):
         """
-        states is of shape B x 64
-        actions is of shape B x 3
+        states is of shape B x 3 x 64 x 64
+        auxiliary is of shape B x 2
+        actions is of shape B x 2
         rewards is of shape B x 1
         dones is of shape B x 1
         """
+        dones = 1. - dones
         latents = self.backbone(states, auxiliary)
         next_latents = self.backbone(next_states, next_auxiliary)
 
@@ -139,25 +152,27 @@ class UASAC(nn.Module):
             # ...take the min at the cat dimension
             next_q, _ = torch.min(next_q, dim=-1, keepdim=True)
 
-            # TD learning, targetQ = R + gamma*nextQ*done
+            # TD learning, targetQ = R + gamma*E(nextQ*done)
             target_q = rewards + dones * gamma * next_q
 
         # critic loss is mean squared TD errors
-        q1_loss = func.smooth_l1_loss(curr_q1, target_q)
-        q2_loss = func.smooth_l1_loss(curr_q2, target_q)
-        q_loss = (q1_loss + q2_loss) / 2.
+        q1_loss = func.smooth_l1_loss(curr_q1, target_q, reduction='none')
+        q2_loss = func.smooth_l1_loss(curr_q2, target_q, reduction='none')
+        q_loss = q1_loss + q2_loss
 
-        # NIG regularizer loss
-        output = self.actor.net(latents)
-        reg_loss = (torch.abs(q_loss.detach()) * (2*output[1] + output[2])).mean()
+        # NIG regularizer scale
+        reg_scale = q_loss.detach() / 2.
 
-        return q_loss, reg_loss
+        return (q_loss.mean() / 2.), reg_scale
 
 
-    def calc_actor_loss(self, states, auxiliary, dones, labels, use_entropy=True):
+    def calc_actor_loss(self, states, auxiliary, dones, labels):
         """
-        states is of shape B x 64
+        states is of shape B x 3 x 64 x 64
+        auxiliary is of shape B x 2
+        dones is of shape B x 1
         """
+        dones = 1. - dones
         latents = self.backbone(states, auxiliary)
 
         # We re-sample actions to calculate expectations of Q.
@@ -170,18 +185,22 @@ class UASAC(nn.Module):
 
         # reinforcement target is maximization of (Q + alpha * entropy) * done
         rnf_loss = 0.
-        if use_entropy:
-            rnf_loss = -((q - self.log_alpha.exp().detach() * entropies) * dones) + 1e-6
+        if self.use_entropy:
+            rnf_loss = -((q - self.log_alpha.exp().detach() * entropies) * dones)
         else:
-            rnf_loss = -(q * dones) + 1e-6
+            rnf_loss = -(q * dones)
 
         # supervised loss is NLL loss between label and output
         sup_loss = NIG_NLL(torch.atanh(labels), *output, reduce=False) + 1e-6
 
         # uncertainty scalar
-        sup_scale = (1. - torch.exp(-3. * uncertainty))
+        sup_scale = (1. - torch.exp(-self.confidence_scale * uncertainty))
 
-        return rnf_loss, sup_loss, sup_scale.detach()
+        # NIG regularizer scale
+        output = self.actor.net(latents)
+        reg_loss = 2*output[1] + output[2]
+
+        return rnf_loss, sup_loss, sup_scale.detach(), reg_loss
 
 
     def calc_alpha_loss(self, states, auxiliary):
@@ -194,7 +213,7 @@ class UASAC(nn.Module):
         _, entropies, _ = self.actor.sample(*output)
 
         # Intuitively, we increse alpha when entropy is less than target entropy, vice versa.
-        entropy_loss = (self.log_alpha * (entropies - self.target_entropy).detach()).mean()
+        entropy_loss = (self.log_alpha * (self.target_entropy - entropies).detach()).mean()
 
         return entropy_loss
 

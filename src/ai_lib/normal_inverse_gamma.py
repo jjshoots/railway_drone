@@ -20,37 +20,37 @@ def NormalInvGamma(gamma, nu, alpha, beta):
 
     InvGamma = D.transformed_distribution.TransformedDistribution(
         D.Gamma(alpha, beta),
-        D.transforms.PowerTransform(torch.tensor(-1.).to(gamma.device))
+        D.transforms.PowerTransform(torch.tensor(-1.).to(alpha.device))
     )
 
-    sigma_sq = InvGamma.rsample()
-    mu = D.Normal(gamma, (1./nu) * sigma_sq).rsample()
+    var = InvGamma.rsample()
+    mu = D.Normal(gamma, torch.sqrt(beta / (alpha - 1) / nu)).rsample()
 
-    return D.Normal(mu, sigma_sq)
+    return D.Normal(mu, torch.sqrt(var))
 
 
 def ShrunkenNormalInvGamma(gamma, nu, alpha, beta):
     """
     Normal Inverse Gamma Distribution
     """
+    assert torch.all(alpha > 1.), 'alpha must be more than one'
+    assert torch.all(beta > 0.), 'beta must be more than zero'
+
+    var = beta / (alpha - 1)
+
+    return D.Normal(gamma, torch.sqrt(var))
+
+
+def NIG_uncertainty(gamma, nu, alpha, beta):
+    """
+    calculates the epistemic uncertainty of a distribution
+    the value is effectively expectation of sigma square
+    """
     assert torch.all(nu > 0.), 'nu must be more than zero'
     assert torch.all(alpha > 1.), 'alpha must be more than one'
     assert torch.all(beta > 0.), 'beta must be more than zero'
 
-    var = beta / (nu * (alpha - 1))
-
-    return D.Normal(gamma, var)
-
-
-def NIG_uncertainty(alpha, beta):
-    """
-    calculates the aleotoric uncertainty of a distribution
-    the value is effectively expectation of sigma square
-    """
-    assert torch.all(alpha > 1.), 'alpha must be more than one'
-    assert torch.all(beta > 0.), 'beta must be more than zero'
-
-    return beta / (alpha - 1)
+    return torch.sqrt(beta / (alpha - 1) / nu)
 
 
 def NIG_NLL(label, gamma, nu, alpha, beta, reduce=True):

@@ -19,14 +19,14 @@ class Drone():
         start_x += np.sign(start_x) * 2
         start_y = (np.random.rand() - 0.5) * 8
         start_rot = np.random.rand() * np.sign(start_x) * 0.5
-
         # start_x = 0
         # start_y = 0
         # start_rot = 0
+
         self.start_pos = [start_x, start_y, 2]
         self.start_orn = self.p.getQuaternionFromEuler([0, 0, start_rot])
         self.Id = self.p.loadURDF(
-            drone_dir + "/primitive_car/car.urdf",
+            drone_dir + "/primitive_drone/drone.urdf",
             basePosition=self.start_pos,
             baseOrientation=self.start_orn,
             useFixedBase=False
@@ -60,32 +60,30 @@ class Drone():
         )
 
         # outputs normalized body torque commands
-        self.Kp_ang_vel = np.array([1., 1., 1.])
-        self.Ki_ang_vel = np.array([0.001, .001, 0.])
-        self.Kd_ang_vel = np.array([0., .0, 0.])
+        self.Kp_ang_vel = np.array([.5, .5, .15])
+        self.Ki_ang_vel = np.array([.001, .001, 0.])
+        self.Kd_ang_vel = np.array([.001, .001, 0.001])
         self.lim_ang_vel = np.array([1., 1., 1.])
 
         # outputs angular rate
-        self.Kp_ang_pos = np.array([2., 2., 2.])
+        self.Kp_ang_pos = np.array([20., 20., 20.])
         self.Ki_ang_pos = np.array([0., 0., 0.])
-        self.Kd_ang_pos = np.array([0., 0., 0.])
+        self.Kd_ang_pos = np.array([.1, .1, .1])
         self.lim_ang_pos = np.array([5., 5., 5.])
 
         # outputs angular position
-        self.Kp_lin_vel = np.array([0.5, 0.5])
-        self.Ki_lin_vel = np.array([1e-4, 1e-4])
-        self.Kd_lin_vel = np.array([0.2, 0.2])
+        self.Kp_lin_vel = np.array([.13, .13])
+        self.Ki_lin_vel = np.array([.0003, .0003])
+        self.Kd_lin_vel = np.array([.003, .003])
         self.lim_lin_vel = np.array([0.6, 0.6])
 
         # height controllers
-        z_pos_PID = PID(10., 0.01, 1., 5., self.period)
-        z_vel_PID = PID(2., 0.006, 0.5, 1., self.period)
+        z_pos_PID = PID(5., 0., 0., 10., self.period)
+        z_vel_PID = PID(3.0, .10, 1.3, 1., self.period)
         self.z_PIDs = [z_vel_PID, z_pos_PID]
         self.PIDs = []
 
-        self.state = None
-        self.setpoint = np.array([0., 0., 0., 0.])
-        self.set_mode(0)
+        self.reset()
 
         """ CAMERA """
         self.proj_mat = self.p.computeProjectionMatrixFOV(fov=camera_FOV, aspect=1.0, nearVal=0.1, farVal=255.)
@@ -112,7 +110,10 @@ class Drone():
 
 
     def reset(self):
+        self.set_mode(0)
+        self.state = None
         self.rpm = np.array([0., 0., 0., 0.])
+        self.setpoint = np.array([0., 0., 0., 0.])
 
         for PID in self.PIDs:
             PID.reset()
@@ -164,24 +165,24 @@ class Drone():
         lin_vel, ang_vel = self.p.getBaseVelocity(self.Id)
 
         # express vels in local frame
-        rotation = np.linalg.inv(np.array(self.p.getMatrixFromQuaternion(ang_pos)).reshape(3, 3))
+        rotation = np.array(self.p.getMatrixFromQuaternion(ang_pos)).reshape(3, 3).T
         lin_vel = np.matmul(rotation, lin_vel)
         ang_vel = np.matmul(rotation, ang_vel)
 
         # ang_pos in euler form
         ang_pos = self.p.getEulerFromQuaternion(ang_pos)
 
-        self.state = [ang_vel, ang_pos, lin_vel, lin_pos]
+        self.state = np.stack([ang_vel, ang_pos, lin_vel, lin_pos], axis=0)
 
 
     def set_mode(self, mode):
         """
         sets the flight mode:
-            0 - vu, vv, vw, vz  \n
-            1 - u, v, w, vz     \n
-            2 - vu, vv, vw, z   \n
-            3 - u, v, w, z      \n
-            4 - vx, vy, vw, z
+            0 - vp, vq, vr, vz  :  \n
+            1 - p, q, r, vz     :  \n
+            2 - vp, vq, vr, z   :  \n
+            3 - p, q, r, z      :  \n
+            4 - u, v, vr, z     :  \n
         """
 
         self.mode = mode
