@@ -66,7 +66,7 @@ class Drone():
         )
 
         # outputs normalized body torque commands
-        self.Kp_ang_vel = np.array([.5, .5, .15])
+        self.Kp_ang_vel = np.array([.5, .5, .05])
         self.Ki_ang_vel = np.array([.005, .005, 0.])
         self.Kd_ang_vel = np.array([.001, .001, 0.001])
         self.lim_ang_vel = np.array([1., 1., 1.])
@@ -85,7 +85,7 @@ class Drone():
 
         # height controllers
         z_pos_PID = PID(5., 0., 0., 10., self.ctrl_period)
-        z_vel_PID = PID(3.0, .5, 1.3, 1., self.ctrl_period)
+        z_vel_PID = PID(1.5, .1, .25, 1., self.ctrl_period)
         self.z_PIDs = [z_vel_PID, z_pos_PID]
         self.PIDs = []
 

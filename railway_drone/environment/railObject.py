@@ -89,30 +89,44 @@ class RailSingle():
 
         self.p = p
 
-        ROT = 0.105
+        # values are obtained from the readme in the rails models folder
+        ROT = 0.1 * math.pi
+        c, s, = np.cos(-start_orn[-1]), np.sin(-start_orn[-1])
+        rot_mat = np.array([[c, -s], [s, c]]).T
 
         if spawn_id == 0:
+            end_offset = np.matmul(rot_mat, np.array([0, 10.125]))
+            end_offset = np.array([*end_offset, 0.])
+
             self.start_pos = start_pos
             self.start_orn = start_orn
-            self.end_pos = self.start_pos + np.array([20.24*np.sin(-start_orn[-1]), 20.24*np.cos(start_orn[-1]), 0])
-            self.end_orn = self.start_orn + np.array([0, 0, 0])
-            self.base_pos = self.start_pos + np.array([10.12*np.sin(-start_orn[-1]), 10.12*np.cos(start_orn[-1]), 0])
+            self.end_pos = self.start_pos + 2 * end_offset
+            self.end_orn = self.start_orn
+            self.base_pos = self.start_pos + end_offset
             self.base_orn = self.start_orn
         elif spawn_id == 1:
-            rotation = ROT + start_orn[-1]
+            end_offset = np.matmul(rot_mat, np.array([-2.209, 20.186]))
+            end_offset = np.array([*end_offset, 0.])
+            base_offset = np.matmul(rot_mat, np.array([0., 10.061]))
+            base_offset = np.array([*base_offset, 0.])
+
             self.start_pos = start_pos
             self.start_orn = start_orn
-            self.end_pos = self.start_pos + np.array([20.24*np.sin(-rotation), 20.24*np.cos(rotation), 0])
-            self.end_orn = self.start_orn + np.array([0, 0, ROT*3])
-            self.base_pos = self.start_pos + np.array([10.12*np.sin(-start_orn[-1]), 10.12*np.cos(start_orn[-1]), 0])
+            self.end_pos = self.start_pos + end_offset
+            self.end_orn = self.start_orn + np.array([0, 0, ROT])
+            self.base_pos = self.start_pos + base_offset
             self.base_orn = self.start_orn
         elif spawn_id == 2:
-            rotation = -ROT + start_orn[-1]
+            end_offset = np.matmul(rot_mat, np.array([2.209, 20.186]))
+            end_offset = np.array([*end_offset, 0.])
+            base_offset = np.matmul(rot_mat, np.array([0., 10.061]))
+            base_offset = np.array([*base_offset, 0.])
+
             self.start_pos = start_pos
             self.start_orn = start_orn
-            self.end_pos = self.start_pos + np.array([20.24*np.sin(-rotation), 20.24*np.cos(rotation), 0])
-            self.end_orn = self.start_orn + np.array([0, 0, -ROT*3])
-            self.base_pos = self.start_pos + np.array([10.12*np.sin(-start_orn[-1]), 10.12*np.cos(start_orn[-1]), 0])
+            self.end_pos = self.start_pos + end_offset
+            self.end_orn = self.start_orn + np.array([0, 0, -ROT])
+            self.base_pos = self.start_pos + base_offset
             self.base_orn = self.start_orn
         else:
             print('IMPORTING UNKNOWN RAIL OBJECT')
@@ -123,7 +137,6 @@ class RailSingle():
             self.base_pos = start_pos
             self.base_orn = start_orn
 
-        # a straight rail has length 20.24
         self.Id = loadOBJ(
             self.p,
             visualId=rail_mesh_ids[spawn_id],
