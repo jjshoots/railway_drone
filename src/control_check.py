@@ -5,7 +5,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 matplotlib.use("TkAgg")
 
-from env.aviary import *
+from railway_drone.environment.aviary import *
 
 class Environment():
     """

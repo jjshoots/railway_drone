@@ -7,15 +7,10 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +188 src/mainSAC.py
-badd +96 src/env/drone.py
-badd +124 src/env/aviary.py
-badd +12 src/env/PID.py
-badd +76 src/env/environment.py
-badd +90 src/control_check.py
+badd +0 src/mainSAC.py
 argglobal
 %argdel
-$argadd ./
+$argadd .gitignore
 edit src/mainSAC.py
 set splitbelow splitright
 set nosplitbelow
@@ -34,13 +29,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 309 - ((43 * winheight(0) + 22) / 44)
+let s:l = 1 - ((0 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-309
-normal! 09|
-if exists(':tcd') == 2 | tcd ~/Sandboxes/railway_drone | endif
+1
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

@@ -3,21 +3,18 @@ import time
 import numpy as np
 import numpy.polynomial.polynomial as polynomial
 
-import matplotlib.pyplot as plt
-
 import pybullet as p
 import pybullet_data
 from pybullet_utils import bullet_client
 
-from env.drone import *
-from env.railObject import *
+from railway_drone.environment.drone import *
+from railway_drone.environment.railObject import *
 
 class Aviary(bullet_client.BulletClient):
-    def __init__(self, rails_dir, drone_dir, plants_dir, render=True):
+    def __init__(self, rails_dir, plants_dir, render=True):
         super().__init__(p.GUI if render else p.DIRECT)
 
         self.rails_dir = rails_dir
-        self.drone_dir = drone_dir
         self.plants_dir = plants_dir
         self.initialize_common_meshes()
 
@@ -47,7 +44,7 @@ class Aviary(bullet_client.BulletClient):
         )
 
         # spawn drone
-        self.drone = Drone(self, drone_dir=self.drone_dir, camera_Hz=self.camera_Hz)
+        self.drone = Drone(self)
 
         # start rails, the first rail in the list is the main rail to follow
         self.rails = []
@@ -90,8 +87,8 @@ class Aviary(bullet_client.BulletClient):
         self.stepSimulation()
         self.step_count += 1
 
+        # we only update the environment items right before we need to update the camera
         if self.step_count % self.rel_cam_Hz == 0:
-
             # handle the rails
             spawn_id = self.rails[0].handle_rail_bounds(self.drone.state[-1][:2])
             spawn_id = -2 if spawn_id == -1 else spawn_id

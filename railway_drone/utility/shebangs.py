@@ -1,11 +1,9 @@
-
 import os
-import argparse
-
 import yaml
 import wandb
+import argparse
 
-from ai_lib.helpers import *
+from railway_drone.ai.helpers import *
 
 def shutdown_handler(*_):
     print("ctrl-c invoked")
@@ -46,7 +44,7 @@ def arg_parser():
     return parser.parse_args()
 
 
-def parse_set():
+def parse_set(settings_file: str):
     """
     Fundamentally there's two things we need to deal with:
         - settings.yaml
@@ -59,7 +57,7 @@ def parse_set():
     args = arg_parser()
 
     # parse settings
-    with open(os.path.join(os.path.dirname(__file__), '../settings.yaml')) as f:
+    with open(settings_file) as f:
         settings = yaml.load(f, Loader=yaml.FullLoader)
 
     # format settings a bit

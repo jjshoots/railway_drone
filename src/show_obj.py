@@ -8,7 +8,7 @@ from pybullet_utils import bullet_client
 
 from signal import signal, SIGINT
 
-from env.utilities import *
+from railway_drone.environment.utilities import *
 
 def shutdown_handler(*_):
     print("ctrl-c invoked")

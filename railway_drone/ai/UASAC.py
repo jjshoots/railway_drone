@@ -5,9 +5,9 @@ import torch.nn as nn
 import torch.distributions as dist
 import torch.nn.functional as func
 
-from ai_lib.UASACTNet import *
-from ai_lib.neural_blocks import *
-from ai_lib.normal_inverse_gamma import *
+from railway_drone.ai.UASACTNet import *
+from railway_drone.ai.neural_blocks import *
+from railway_drone.ai.normal_inverse_gamma import *
 
 
 class TwinnedQNetwork(nn.Module):

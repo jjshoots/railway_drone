@@ -1,22 +1,17 @@
 import os
-import cv2
 import glob
 import math
-import time
 import numpy as np
 
-import matplotlib.pyplot as plt
-
-from env.aviary import *
+from railway_drone.environment.aviary import *
 
 class Environment():
     """
     Wrapper for Aviary and Drone Classes with domain randomization
     """
-    def __init__(self, rails_dir, drone_dir, plants_dir, tex_dir, num_envs, max_steps=math.inf):
+    def __init__(self, rails_dir, plants_dir, tex_dir, num_envs, max_steps=math.inf):
         self.max_steps = max_steps
         self.rails_dir = rails_dir
-        self.drone_dir = drone_dir
         self.plants_dir = plants_dir
         self.texture_paths = glob.glob(os.path.join(tex_dir, '**', '*.jpg'), recursive=True)
 
@@ -35,7 +30,7 @@ class Environment():
 
         self.step_count = 0
 
-        self.env = Aviary(rails_dir=self.rails_dir, drone_dir=self.drone_dir, plants_dir=self.plants_dir, render=self.render)
+        self.env = Aviary(rails_dir=self.rails_dir, plants_dir=self.plants_dir, render=self.render)
         self.env.drone.set_mode(4)
         self.frame_size = self.env.drone.frame_size
 

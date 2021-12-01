@@ -1,25 +1,18 @@
 import os
-import argparse
-from sys import exit
-from signal import signal, SIGINT
-
 import cv2
-import yaml
 import torch
-import wandb
 import numpy as np
-import matplotlib.pyplot as plt
+
+from signal import signal, SIGINT
 
 import torch
 import torch.nn.functional as F
 
-from utility.shebangs import *
-
-from env.environment import *
-
-from ai_lib.replay_buffer import *
-from ai_lib.normal_inverse_gamma import *
-from ai_lib.trackNet import *
+from railway_drone.utility.shebangs import *
+from railway_drone.environment.environment import *
+from railway_drone.ai.replay_buffer import *
+from railway_drone.ai.normal_inverse_gamma import *
+from railway_drone.ai.trackNet import *
 
 
 def train(set):

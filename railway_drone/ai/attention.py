@@ -5,10 +5,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-try:
-    from .neural_blocks import *
-except:
-    from neural_blocks import *
+from railway_drone.ai.neural_blocks import *
 
 
 class AttentionHead(nn.Module):

@@ -8,13 +8,13 @@ import numpy as np
 
 import torch
 
-from utility.shebangs import *
+from railway_drone.utility.shebangs import *
 
-from env.environment import *
+from railway_drone.environment.environment import *
 
-from ai_lib.replay_buffer import *
-from ai_lib.normal_inverse_gamma import *
-from ai_lib.UASAC import UASAC
+from railway_drone.ai.replay_buffer import *
+from railway_drone.ai.normal_inverse_gamma import *
+from railway_drone.ai.UASAC import *
 
 
 def train(set):
@@ -209,7 +209,6 @@ def setup_envs(set):
     [
         Environment(
             rails_dir='models/rails/',
-            drone_dir='models/vehicles/',
             plants_dir='models/plants/',
             tex_dir='models/textures/',
             num_envs=set.num_envs,
@@ -291,7 +290,7 @@ def setup_nets(set):
 
 if __name__ == '__main__':
     signal(SIGINT, shutdown_handler)
-    set = parse_set()
+    set = parse_set(os.path.join(os.path.dirname(__file__), 'settings.yaml'))
     check_venv()
 
     """ SCRIPTS HERE """
