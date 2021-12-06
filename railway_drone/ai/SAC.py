@@ -7,7 +7,6 @@ import torch.nn.functional as func
 from railway_drone.ai.neural_blocks import *
 from railway_drone.ai.autoencoder import *
 
-
 class TwinnedQNetwork(nn.Module):
     """
     Twin Q Network
@@ -80,7 +79,6 @@ class GaussianActor(nn.Module):
         entropies = log_probs.sum(dim=-1, keepdim=True)
 
         return actions, entropies
-
 
 
 class SoftActorCritic(nn.Module):

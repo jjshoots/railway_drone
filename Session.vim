@@ -9,12 +9,13 @@ endif
 set shortmess=aoO
 badd +1 src/mainSAC.py
 badd +61 railway_drone/environment/railObject.py
-badd +88 railway_drone/environment/drone.py
+badd +61 railway_drone/environment/drone.py
 badd +43 railway_drone/environment/aviary.py
+badd +184 railway_drone/ai/SAC.py
 argglobal
 %argdel
 $argadd .gitignore
-edit railway_drone/environment/drone.py
+edit railway_drone/ai/SAC.py
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -32,12 +33,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 61 - ((8 * winheight(0) + 22) / 44)
+let s:l = 83 - ((34 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-61
-normal! 033|
+83
+normal! 0
 if exists(':tcd') == 2 | tcd ~/Sandboxes/railway_drone | endif
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
