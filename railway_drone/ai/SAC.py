@@ -4,8 +4,8 @@ import torch.nn as nn
 import torch.distributions as dist
 import torch.nn.functional as func
 
-from ai_lib.neural_blocks import *
-from ai_lib.autoencoder import *
+from railway_drone.ai.neural_blocks import *
+from railway_drone.ai.autoencoder import *
 
 
 class TwinnedQNetwork(nn.Module):
@@ -92,9 +92,6 @@ class SoftActorCritic(nn.Module):
 
         self.num_actions = num_actions
 
-        # autoencoder
-        self.backbone = autoencoder()
-
         # actor network
         self.actor = GaussianActor(num_inputs, num_actions)
 
@@ -133,6 +130,9 @@ class SoftActorCritic(nn.Module):
         rewards is of shape B x 1
         dones is of shape B x 1
         """
+        # flip the dones
+        done = 1. - done
+
         # current Q
         curr_q1, curr_q2 = self.critic(states, actions)
 
@@ -163,6 +163,9 @@ class SoftActorCritic(nn.Module):
         """
         states is of shape B x 64
         """
+        # flip the dones
+        done = 1. - done
+
         # We re-sample actions to calculate expectations of Q.
         actions, entropies = self.actor(states)
 
